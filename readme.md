@@ -26,7 +26,23 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Login and register views and routes pre-configured
 * pt-BR language
 
+### Installation
+* Clone the repo
+    ```
+    git clone https://github.com/Digital-Serra/laravel-custom.git
+    ```
+* Install the dependencies
+    ```
+    composer install
+    npm install
+    bower install
+    gulp
+    cp .env.example .env
+    php artisan key:generate
+    php artisan migrate
+    ```
+    Enjoy!
 
-### License
+#### License
 
 The Laravel framework and this package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
