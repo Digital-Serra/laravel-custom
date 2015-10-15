@@ -29,4 +29,4 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Laravel framework and this package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
