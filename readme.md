@@ -34,13 +34,32 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Install the dependencies
     ```
     composer install
+    ```
+
+    ```
     npm install
+    ```
+
+    ```
     bower install
+    ```
+
+    ```
     gulp
+    ```
+
+    ```
     cp .env.example .env
+    ```
+
+    ```
     php artisan key:generate
+    ```
+
+    ```
     php artisan migrate
     ```
+
     Enjoy!
 
 #### License
