@@ -35,9 +35,10 @@ elixir(function(mix) {
     .copy(bowerDir + 'sweetalert/dist/sweetalert.css','public/css')
     .copy(bowerDir + 'sweetalert/dist/sweetalert.min.js','public/js')
 
-    //Copy Sweetalert assets to public
+    //Copy Datetimepicker and momentum assets to public
     .copy(bowerDir + 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css','public/css')
     .copy(bowerDir + 'eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js','public/js')
+    .copy(bowerDir + 'moment/min/moment.min.js','public/js')
 
     //Copy jquery, bootstrap and Particles.js to js folder
     .copy(bowerDir + 'jquery/dist/jquery.min.js','public/js')

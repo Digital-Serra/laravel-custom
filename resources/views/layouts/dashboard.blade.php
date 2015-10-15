@@ -248,7 +248,7 @@
 </body>
 
 {{-- Moment.js --}}
-<script src="{{ asset('js/moment.js') }}"></script>
+<script src="{{ asset('js/moment.min.js') }}"></script>
 
 
 
