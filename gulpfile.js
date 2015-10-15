@@ -17,23 +17,30 @@ elixir.config.sourcemaps = false;
  */
 
 elixir(function(mix) {
-      /*Bootstrap and Font Awesome Fonts*/
-      mix.copy([
-          bowerDir + 'bootstrap/fonts',
-          bowerDir + 'font-awesome/fonts'
-          ],
-          'public/fonts'
-      )
+    mix.copy([
+            bowerDir + 'bootstrap/fonts',
+            bowerDir + 'font-awesome/fonts'
+        ],
+        'public/fonts'
+    )
 
-     //Compiling font awesome and bootstrap into a single file
-     .less([
-         '../../../'+bowerDir + 'bootstrap/less/bootstrap.less',
-         '../../../'+bowerDir + 'font-awesome/less/font-awesome.less'],
-         'public/css/app.css'
-     )
+        //Compiling font awesome and bootstrap into a single file
+        .less([
+            '../../../'+bowerDir + 'bootstrap/less/bootstrap.less',
+            '../../../'+bowerDir + 'font-awesome/less/font-awesome.less'],
+        'public/css/app.css'
+    )
 
-          //Copy jquery, bootstrap and Particles.js to js folder
-     .copy(bowerDir + 'jquery/dist/jquery.min.js','public/js')
-     .copy(bowerDir + 'bootstrap/dist/js/bootstrap.min.js','public/js')
-     .copy(bowerDir + 'particles.js/particles.min.js','public/js/auth/')
+    //Copy Sweetalert assets to public
+    .copy(bowerDir + 'sweetalert/dist/sweetalert.css','public/css')
+    .copy(bowerDir + 'sweetalert/dist/sweetalert.min.js','public/js')
+
+    //Copy Sweetalert assets to public
+    .copy(bowerDir + 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css','public/css')
+    .copy(bowerDir + 'eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js','public/js')
+
+    //Copy jquery, bootstrap and Particles.js to js folder
+    .copy(bowerDir + 'jquery/dist/jquery.min.js','public/js')
+    .copy(bowerDir + 'bootstrap/dist/js/bootstrap.min.js','public/js')
+    .copy(bowerDir + 'particles.js/particles.min.js','public/js/auth/')
 });
