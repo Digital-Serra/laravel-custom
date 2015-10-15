@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Digital Serra Tecnologia Digital">
     <title>Administração</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="{{ Module::asset('admin:css/plugins/morris.css') }}" rel="stylesheet">
+    <!-- Bootstrap and Font Awesome Core CSS -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Sweetalert CSS -->
     <link href="{{ asset('css/sweetalert.css') }}" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet" type="text/css">
-
     <!-- Custom CSS -->
-    <link href="{{ Module::asset('admin:css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard/sb-admin.css') }}" rel="stylesheet">
 
     {{--Bootstrap time picker --}}
     <link rel="stylesheet" href="{{ url('css/bootstrap-datetimepicker.min.css') }}"/>
@@ -34,9 +29,6 @@
 
     <!-- jQuery -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
-
-
-
 </head>
 <body>
 <div id="wrapper">
@@ -51,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('admin.index') }}">{{ $app['name'].' '.$app['version'] }}</a>
+            <a class="navbar-brand" href="{{ route('dashboard.index') }}">{{ env('APP_NAME',null).' '.env('APP_VERSION',null) }}</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -73,17 +65,17 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li class="active">
-                    <a href="{{ route('admin.index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    <a href="{{ route('dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#ofertas"><i
                                 class="fa fa-fw fa-gift"></i> Ofertas <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="ofertas" class="collapse">
                         <li>
-                            <a href="{{ route('offer.index') }}"><i class="fa fa-fw fa-eye"></i> Ver ofertas</a>
+                            <a href=""><i class="fa fa-fw fa-eye"></i> Ver ofertas</a>
                         </li>
                         <li>
-                            <a href="{{ route('offer.add') }}"><i class="fa fa-fw fa-plus"></i> Nova oferta</a>
+                            <a href=""><i class="fa fa-fw fa-plus"></i> Nova oferta</a>
                         </li>
                     </ul>
                 </li>
@@ -92,10 +84,10 @@
                                 class="fa fa-fw fa-object-group"></i> Projetos <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="galeria" class="collapse">
                         <li>
-                            <a href="{{ route('gallery.index') }}"><i class="fa fa-fw fa-eye"></i> Ver Projetos</a>
+                            <a href=""><i class="fa fa-fw fa-eye"></i> Ver Projetos</a>
                         </li>
                         <li>
-                            <a href="{{ route('gallery.add') }}"><i class="fa fa-fw fa-plus"></i> Novo Projeto</a>
+                            <a href=""><i class="fa fa-fw fa-plus"></i> Novo Projeto</a>
                         </li>
                     </ul>
                 </li>
@@ -104,10 +96,10 @@
                                 class="fa fa-fw fa-photo"></i> Imagens de Fundo <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="image" class="collapse">
                         <li>
-                            <a href="{{ route('image.index') }}"><i class="fa fa-fw fa-eye"></i> Ver Imagens</a>
+                            <a href=""><i class="fa fa-fw fa-eye"></i> Ver Imagens</a>
                         </li>
                         <li>
-                            <a href="{{ route('image.add') }}"><i class="fa fa-fw fa-plus"></i> Nova Imagem</a>
+                            <a href=""><i class="fa fa-fw fa-plus"></i> Nova Imagem</a>
                         </li>
                     </ul>
                 </li>
@@ -125,11 +117,11 @@
                 <div class="col-lg-12">
                     <h1 class="page-header">
                         Dashboard
-                        <small>{{ $page_name }}</small>
+                        <small></small>
                     </h1>
                     <ol class="breadcrumb">
                         <li class="active">
-                            <i class="fa fa-dashboard"></i> Dashboard <small>{{ ' / '.$page_name }}</small>
+                            <i class="fa fa-dashboard"></i> Dashboard <small></small>
                         </li>
                     </ol>
                 </div>
@@ -144,12 +136,12 @@
                                     <i class="fa fa-gift fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{ $offers->count() }}</div>
+                                    <div class="huge"></div>
                                     <div>Ofertas</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ route('offer.index') }}">
+                        <a href="">
                             <div class="panel-footer">
                                 <span class="pull-left">Veja</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -167,12 +159,12 @@
                                     <i class="fa fa-object-group fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{ $projects->count() }}</div>
+                                    <div class="huge"></div>
                                     <div>Projetos</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ route('gallery.index') }}">
+                        <a href="">
                             <div class="panel-footer">
                                 <span class="pull-left">Veja</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -190,12 +182,12 @@
                                     <i class="fa fa-photo fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{ $images->count() }}</div>
+                                    <div class="huge"></div>
                                     <div> Imagens de Fundo</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ route('image.index') }}">
+                        <a href="">
                             <div class="panel-footer">
                                 <span class="pull-left">Veja</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -270,11 +262,6 @@
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <script src="{{ asset('js/sweetalert.min.js') }}"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="{{ Module::asset('admin:js/plugins/morris/raphael.min.js') }}"></script>
-<script src="{{ Module::asset('admin:js/plugins/morris/morris.min.js') }}"></script>
-<script src="{{ Module::asset('admin:js/plugins/morris/morris-data.js') }}"></script>
 
 {{-- Ckeditor --}}
 <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
