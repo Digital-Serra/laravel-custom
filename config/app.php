@@ -168,7 +168,12 @@ return [
         /*
          * Ssh Laravel collective
          * */
-        Collective\Remote\RemoteServiceProvider::class
+        Collective\Remote\RemoteServiceProvider::class,
+
+        /*
+         * Laracasts Flash
+         * */
+        Laracasts\Flash\FlashServiceProvider::class
 
     ],
 
@@ -231,6 +236,9 @@ return [
 
         //Debugbar
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        //Laracasts Flash
+        'Flash' => Laracasts\Flash\Flash::class,
 
     ],
 

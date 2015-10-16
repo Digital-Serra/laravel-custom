@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c0be865ca502a3e10cbc59fd7da07b9",
-    "content-hash": "e511c04116683efcb17bcd7bed7da6dd",
+    "hash": "404b1e4e98066cf50de9c144846bbc5d",
+    "content-hash": "6a5d99fe6065313666876e1902535e16",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -520,6 +520,49 @@
             "time": "2015-03-11 20:06:43"
         },
         {
+            "name": "laracasts/flash",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "a2e237ae34fcc73c4b0755fe51d1ac2063be781e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/a2e237ae34fcc73c4b0755fe51d1ac2063be781e",
+                "reference": "a2e237ae34fcc73c4b0755fe51d1ac2063be781e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2015-02-01 20:07:15"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.1.20",
             "source": {
@@ -700,16 +743,16 @@
         },
         {
             "name": "laravelcollective/remote",
-            "version": "v5.1.3",
+            "version": "v5.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/remote.git",
-                "reference": "0384fe98b14fde64456fbe09c34de9e932669d8c"
+                "reference": "3bf81d9cd5e230fc2417455f25bb52610e0cf330"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/remote/zipball/0384fe98b14fde64456fbe09c34de9e932669d8c",
-                "reference": "0384fe98b14fde64456fbe09c34de9e932669d8c",
+                "url": "https://api.github.com/repos/LaravelCollective/remote/zipball/3bf81d9cd5e230fc2417455f25bb52610e0cf330",
+                "reference": "3bf81d9cd5e230fc2417455f25bb52610e0cf330",
                 "shasum": ""
             },
             "require": {
@@ -749,7 +792,7 @@
                 "laravel",
                 "remote"
             ],
-            "time": "2015-09-26 05:28:00"
+            "time": "2015-10-16 03:45:11"
         },
         {
             "name": "league/flysystem",
@@ -1106,20 +1149,23 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "f667aa2000a192adfa53332335a2ae0c1cb9ea6e"
+                "reference": "9a0ce69360aa22413a96f2bf93f61235e2c18486"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/f667aa2000a192adfa53332335a2ae0c1cb9ea6e",
-                "reference": "f667aa2000a192adfa53332335a2ae0c1cb9ea6e",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/9a0ce69360aa22413a96f2bf93f61235e2c18486",
+                "reference": "9a0ce69360aa22413a96f2bf93f61235e2c18486",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.0"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
             "autoload": {
@@ -1144,7 +1190,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2015-10-08 12:57:25"
+            "time": "2015-10-16 03:43:13"
         },
         {
             "name": "phpseclib/phpseclib",
