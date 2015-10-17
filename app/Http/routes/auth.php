@@ -9,8 +9,20 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('/register', ['as'=>'auth.register','uses'=>'AuthController@getRegister']);
     Route::post('/register', ['as'=>'auth.post_register','uses'=>'AuthController@postRegister']);
 
-//Logout
+    //Authenticated users can entry
     Route::group(['middleware' => 'auth'], function () {
+
+        //Logout
         Route::get('/logout', ['as'=>'auth.logout','uses'=>'AuthController@getLogout']);
     });
+
+
+    //Reset password routes
+    // Password reset link request routes...
+    Route::get('password/email', ['as'=>'auth.password.email','uses'=>'PasswordController@getEmail']);
+    Route::post('password/email', ['as'=>'auth.password.postEmail','uses'=>'PasswordController@postEmail']);
+
+    // Password reset routes...
+    Route::get('password/reset/{token}', ['as'=>'auth.reset','uses'=>'PasswordController@getReset']);
+    Route::post('password/reset', ['as'=>'auth.password.postReset','uses'=>'PasswordController@postReset']);
 });

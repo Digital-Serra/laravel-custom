@@ -21,8 +21,47 @@
 </head>
 <body>
 <div class="container">
-    @section('body')
-    @show
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+        <div class="row text-center">
+            <img class="img-responsive" src="{{ asset('img/logo.svg') }}"/>
+        </div>
+
+        <div class="row  text-center">
+            <div class="col-md-12">
+                @if (Session::has('status'))
+                    <div class="alert alert-warning">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                        {{ Session::get('status') }}
+                    </div>
+                @endif
+
+                @unless($errors->isEmpty())
+                    <ul style="list-style: none;">
+                        @foreach($errors->getMessages() as $error)
+                            <li>
+                                <p class="alert alert-danger">
+                                    <a href="#" class="close" data-dismiss="alert"
+                                       aria-label="close">&times;</a>
+                                    {{ $error[0] }}
+                                </p>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endunless
+                @if (Session::has('flash_notification.message'))
+                    <div class="alert alert-{{ Session::get('flash_notification.level') }}">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                        {{ Session::get('flash_notification.message') }}
+                    </div>
+                @endif
+            </div>
+        </div>
+        @section('body')
+        @show
+    </div>
     <div id="particles-js"></div>
 </div>
 <div class="footer">
@@ -33,7 +72,7 @@
     <script src="{{ asset('js/auth/particles.min.js') }}"></script>
     <script>
         /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', 'js/auth/particles.json', function() {
+        particlesJS.load('particles-js', 'js/auth/particles.json', function () {
             console.log('callback - particles.js config loaded');
         });
     </script>

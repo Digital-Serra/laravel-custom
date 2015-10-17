@@ -1,30 +1,6 @@
 @extends('layouts.auth-master')
 @section('title','Registro')
 @section('body')
-    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-
-        <div class="row text-center">
-            <img class="img-responsive" src="{{ asset('img/logo.svg') }}" />
-        </div>
-
-        <div class="row  text-center">
-            <div class="col-md-12">
-                @unless($errors->isEmpty())
-                    <ul style="list-style: none;">
-                        @foreach($errors->getMessages() as $error)
-                            <li>
-                                <p class="alert alert-danger">
-                                    <a href="#" class="close" data-dismiss="alert"
-                                       aria-label="close">&times;</a>
-                                    {{ $error[0] }}
-                                </p>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endunless
-            </div>
-        </div>
-
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title text-center">Registre-se</div>
@@ -70,5 +46,4 @@
 
             </div>
         </div>
-    </div>
 @stop

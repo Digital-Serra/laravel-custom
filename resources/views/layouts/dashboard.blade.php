@@ -43,7 +43,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('dashboard.index') }}">{{ env('APP_NAME',null).' '.env('APP_VERSION',null) }}</a>
+            <a class="navbar-brand"
+               href="{{ route('dashboard.index') }}">{{ env('APP_NAME',null).' '.env('APP_VERSION',null) }}</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -81,7 +82,8 @@
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#galeria"><i
-                                class="fa fa-fw fa-object-group"></i> Projetos <i class="fa fa-fw fa-caret-down"></i></a>
+                                class="fa fa-fw fa-object-group"></i> Projetos <i
+                                class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="galeria" class="collapse">
                         <li>
                             <a href=""><i class="fa fa-fw fa-eye"></i> Ver Projetos</a>
@@ -93,7 +95,8 @@
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#image"><i
-                                class="fa fa-fw fa-photo"></i> Imagens de Fundo <i class="fa fa-fw fa-caret-down"></i></a>
+                                class="fa fa-fw fa-photo"></i> Imagens de Fundo <i
+                                class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="image" class="collapse">
                         <li>
                             <a href=""><i class="fa fa-fw fa-eye"></i> Ver Imagens</a>
@@ -121,7 +124,8 @@
                     </h1>
                     <ol class="breadcrumb">
                         <li class="active">
-                            <i class="fa fa-dashboard"></i> Dashboard <small></small>
+                            <i class="fa fa-dashboard"></i> Dashboard
+                            <small></small>
                         </li>
                     </ol>
                 </div>
@@ -202,13 +206,6 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    @if(Session::has('success'))
-                        <p class="alert alert-success">
-                            <a href="#" class="close" data-dismiss="alert"
-                               aria-label="close">&times;</a>
-                            {{ Session::get('success') }}
-                        </p>
-                    @endif
                     @unless($errors->isEmpty())
                         <ul style="list-style: none;">
                             @foreach($errors->getMessages() as $error)
@@ -222,14 +219,13 @@
                             @endforeach
                         </ul>
                     @endunless
-                    @foreach (Alert::getMessages() as $type => $messages)
-                        @foreach ($messages as $message)
-                            <div class="alert alert-{{ ($type == 'error' ? 'danger' : $type) }}">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                {{ $message }}
-                            </div>
-                        @endforeach
-                    @endforeach
+                    @if (Session::has('flash_notification.message'))
+                        <div class="alert alert-{{ Session::get('flash_notification.level') }}">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                            {{ Session::get('flash_notification.message') }}
+                        </div>
+                    @endif
                 </div>
             </div>
             <!-- /.row -->
@@ -249,7 +245,6 @@
 
 {{-- Moment.js --}}
 <script src="{{ asset('js/moment.min.js') }}"></script>
-
 
 
 <!-- Moment.js locale-->
@@ -281,7 +276,7 @@
                     cancelButtonText: "Cancelar",
                     closeOnConfirm: false
                 },
-                function(){
+                function () {
                     window.location.href = url;
                 });
     }
