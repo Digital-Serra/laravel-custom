@@ -156,11 +156,6 @@ return [
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
-         * Alerts
-         * */
-        Prologue\Alerts\AlertsServiceProvider::class,
-
-        /*
          * Debugbar Laravel
          * */
         Barryvdh\Debugbar\ServiceProvider::class,
@@ -227,9 +222,6 @@ return [
         //Collective
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
-        //Alerts
-        'Alert' => Prologue\Alerts\Facades\Alert::class,
 
         //Collective Remote
         'SSH' => Collective\Remote\RemoteFacade::class,

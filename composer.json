@@ -9,7 +9,6 @@
         "laravel/framework": "5.1.*",
         "laravelcollective/html": "5.1.*",
         "anhskohbo/no-captcha": "2.*",
-        "prologue/alerts": "^0.4.0",
         "filp/whoops": " ~1.0",
         "barryvdh/laravel-debugbar": "^2.0",
         "laravelcollective/remote": "5.1.*",
