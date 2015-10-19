@@ -50,14 +50,6 @@ This package is a standard laravel 5.1.* installation, but with some additional 
     ```
 
     ```
-    cp .env.example .env
-    ```
-
-    ```
-    php artisan key:generate
-    ```
-
-    ```
     php artisan migrate
     ```
 
