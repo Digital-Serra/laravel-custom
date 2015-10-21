@@ -16,17 +16,17 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
     echo "# Initial Commit" >> readme.md
     ```
     
- * Inicializa um repositorio git local
+* Inicializa um repositorio git local
     ```
     git init
     ```
     
- * Adiciona todos os arquivos alterados/criados/deletados/novos
+* Adiciona todos os arquivos alterados/criados/deletados/novos
     ```
     git add .
     ```
     
- * Armazena o conteúdo atual do índice em um novo commit juntamente com uma mensagem que descreve as alterações.
+* Armazena o conteúdo atual do índice em um novo commit juntamente com uma mensagem que descreve as alterações.
     ```
     git commit -m "Initial Commit"
     ```
@@ -36,7 +36,7 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
     git remote add origin https://github.com/Digital-Serra/laravel-custom.git
     ```
     
- * Submete as alteracoes para o repositorio remoto
+* Submete as alteracoes para o repositorio remoto
     ```
     git push origin master
     ```
