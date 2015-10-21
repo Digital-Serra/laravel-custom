@@ -33,7 +33,7 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
     
 * Adiciona a url do repositorio remoto chamado 'origin'
     ```
-    git remote add origin https://github.com/Digital-Serra/laravel-custom.git
+    git remote add origin git@github.com:Digital-Serra/laravel-custom.git
     ```
     
 * Submete as alteracoes para o repositorio remoto
