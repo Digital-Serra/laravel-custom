@@ -10,37 +10,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Passos para o primeiro push
-* Salva o conteudo entre aspas em um arquivo chamado readme.md:
-    ```
-    echo "# Initial Commit" >> readme.md
-    ```
-    
-* Inicializa um repositorio git local
-    ```
-    git init
-    ```
-    
-* Adiciona todos os arquivos alterados/criados/deletados/novos
-    ```
-    git add .
-    ```
-    
-* Armazena o conteúdo atual do índice em um novo commit juntamente com uma mensagem que descreve as alterações.
-    ```
-    git commit -m "Initial Commit"
-    ```
-    
-* Adiciona a url do repositorio remoto chamado 'origin'
-    ```
-    git remote add origin git@github.com:Digital-Serra/laravel-custom.git
-    ```
-    
-* Submete as alteracoes para o repositorio remoto
-    ```
-    git push origin master
-    ```
-
 ## Diferences
 
 This package is a standard laravel 5.1.* installation, but with some additional content and pre-configured
