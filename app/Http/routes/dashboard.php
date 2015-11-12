@@ -1,5 +1,5 @@
 <?php
 //DashBoard Routes
-Route::group(['middleware' => ['auth', 'setUserVariable'],'namespace'=>'Dashboard'], function () {
-    Route::get('/dashboard',['as'=>'dashboard.index','uses'=>'DashController@index']);
+Route::group(['middleware' => ['auth', 'setUserVariable'],'namespace'=>'Dashboard', 'prefix'=>'dashboard'], function () {
+    Route::get('/',['as'=>'dashboard.index','uses'=>'DashController@index']);
 });
