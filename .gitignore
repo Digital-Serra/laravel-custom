@@ -1,12 +1,10 @@
-# Created by https://www.gitignore.io/api/ower,laravel,phpstorm,composer,node
+# Created by https://www.gitignore.io/api/bower,phpstorm,laravel,composer,node,elixir
 
-#!! ERROR: ower is undefined. Use list command to see defined gitignore types !!#
-
-### Laravel ###
-/bootstrap/compiled.php
-.env.*.php
-.env.php
-.env
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 
 ### PhpStorm ###
@@ -19,23 +17,23 @@
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
+# .idea/workspace.xml
+# .idea/tasks.xml
+# .idea/dictionaries
 
 # Sensitive or high-churn files:
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
+# .idea/dataSources.ids
+# .idea/dataSources.xml
+# .idea/sqlDataSources.xml
+# .idea/dynamic.xml
+# .idea/uiDesigner.xml
 
 # Gradle:
-.idea/gradle.xml
-.idea/libraries
+# .idea/gradle.xml
+# .idea/libraries
 
 # Mongo Explorer plugin:
-.idea/mongoSettings.xml
+# .idea/mongoSettings.xml
 
 ## File-based project format:
 *.ipr
@@ -56,6 +54,13 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+
+### Laravel ###
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
 
 
 ### Composer ###
@@ -96,3 +101,10 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
+
+
+### Elixir ###
+/_build
+/deps
+erl_crash.dump
+*.ez
