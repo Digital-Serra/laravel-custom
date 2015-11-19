@@ -1,3 +1,8 @@
+# DEV
+
+#### This branch is for testing purposes only!
+
+
 ## Diferences
 
 This package is a standard laravel 5.1.* installation, but with some additional content and pre-configured
