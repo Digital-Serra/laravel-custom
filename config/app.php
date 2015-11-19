@@ -168,8 +168,12 @@ return [
         /*
          * Laracasts Flash
          * */
-        Laracasts\Flash\FlashServiceProvider::class
+        Laracasts\Flash\FlashServiceProvider::class,
 
+        /*
+         * L5-Repository
+         * */
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
     ],
 
     /*
