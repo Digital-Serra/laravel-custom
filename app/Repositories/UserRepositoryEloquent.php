@@ -9,7 +9,7 @@
 namespace App\Repositories;
 
 
-use App\Models\User;
+use App\Entities\User;
 use Prettus\Repository\Eloquent\BaseRepository;
 
 class UserRepositoryEloquent extends BaseRepository implements UserRepositoryInterface
