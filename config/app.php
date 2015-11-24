@@ -174,11 +174,6 @@ return [
          * L5-Repository
          * */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-
-        /*
-         * UserService Provider
-         * */
-        App\Providers\UserServiceProvider::class,
     ],
 
     /*
