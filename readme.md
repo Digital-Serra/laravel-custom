@@ -7,7 +7,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 
 ## Additional Content
 * Whoops
-* Heroku deploy ready, create your app and push to heroku
+* Heroku deploy ready, create your app, add [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) and push to heroku
 * Laravel Collective
 * Repository Layer
 * Service Layer
