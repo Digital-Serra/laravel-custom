@@ -10,6 +10,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Heroku deploy ready, create your app, add [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) and push to heroku
 * Laravel Collective
 * Repository Layer
+* IDE Helper Files for Facades, Models and PhpStorm autocompletation
 * Service Layer
 * Laracasts/Flash (Flash messages)
 * Laravel Collective Remote
