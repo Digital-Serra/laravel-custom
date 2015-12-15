@@ -174,6 +174,10 @@ return [
          * L5-Repository
          * */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
+	/*
+         * Barryvdh\LaravelIdeHelper
+         **/
+	Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
     /*
