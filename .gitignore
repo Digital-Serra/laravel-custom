@@ -108,3 +108,7 @@ node_modules
 /deps
 erl_crash.dump
 *.ez
+
+### IDE Helper Files  ###
+.phpstorm.meta.php
+_ide_helper.php
