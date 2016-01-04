@@ -3,7 +3,7 @@
 
 ## Diferences
 
-This package is a standard laravel 5.1.* installation, but with some additional content and pre-configured
+This package is a standard laravel 5.2.* installation, but with some additional content and pre-configured
 
 ## Additional Content
 * Whoops
