@@ -1,6 +1,6 @@
 # Laravel Custom App
 
-> For Laravel 5.2 use the [5.2 branch](https://github.com/mauri870/laravel-custom/tree/5.2)
+> For Laravel 5.2 use the [5.2 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.2)
 
 ## Diferences
 
