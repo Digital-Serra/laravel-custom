@@ -25,7 +25,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 ### Installation
 * Clone the repo
     ```
-    git clone https://github.com/Digital-Serra/laravel-custom.git
+    git clone -b 5.2 https://github.com/Digital-Serra/laravel-custom.git
     ```
 * Install the dependencies
     ```
