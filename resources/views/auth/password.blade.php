@@ -19,9 +19,9 @@
                     <button type="submit" href="#" class="btn btn-success pull-right"><i
                                 class="fa fa-check"></i> Redefinir
                     </button>
-                    <a href="{{ route('home.index') }}">
+                    <a href="{{ route('auth.login') }}">
                         <button type="button" href="#" class="btn btn-primary pull-left"><i
-                                    class="fa fa-reply-all"></i> Voltar ao site
+                                    class="fa fa-reply-all"></i> Voltar
                         </button>
                     </a><br><br>
                 </div>
