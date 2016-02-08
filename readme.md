@@ -1,5 +1,5 @@
 # Laravel Custom App
-
+[![Build Status](https://travis-ci.org/Digital-Serra/laravel-custom.svg?branch=5.2)](https://travis-ci.org/Digital-Serra/laravel-custom)
 
 ## Diferences
 
