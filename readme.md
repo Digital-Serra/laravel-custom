@@ -1,5 +1,7 @@
 # Laravel Custom App
 
+[![Build Status](https://travis-ci.org/Digital-Serra/laravel-custom.svg?branch=master)](https://travis-ci.org/Digital-Serra/laravel-custom)
+
 > For Laravel 5.2 use the [5.2 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.2)
 
 ## Diferences
