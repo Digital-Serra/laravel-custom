@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Digital-Serra/laravel-custom.svg?branch=master)](https://travis-ci.org/Digital-Serra/laravel-custom)
 
-> For Laravel 5.2 use the [5.2 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.2)
+> For stable Laravel 5.1 use the [5.1 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.1)
 
 ## Diferences
 
@@ -52,6 +52,8 @@ This package is a standard laravel 5.1.* installation, but with some additional 
     ```
 
     Enjoy!
+    
+    Get template options and layouts at [NEON Dashboard Theme](http://demo.neontheme.com/dashboard/main/)
 
 #### License
 
