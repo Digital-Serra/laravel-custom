@@ -23,6 +23,6 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('password/email', ['as'=>'auth.password.postEmail','uses'=>'PasswordController@postEmail']);
 
     // Password reset routes...
-    Route::get('password/reset/{token}', ['as'=>'auth.reset','uses'=>'PasswordController@getReset']);
+    Route::get('password/reset/{token}', ['middleware'=>'checkTokenExists','as'=>'auth.reset','uses'=>'PasswordController@getReset']);
     Route::post('password/reset', ['as'=>'auth.password.postReset','uses'=>'PasswordController@postReset']);
 });
