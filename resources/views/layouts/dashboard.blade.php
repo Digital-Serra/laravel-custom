@@ -7,22 +7,8 @@
     <meta name="author" content="Mauri de Souza Nunes(github.com/mauri870) - Digital Serra Tecnologia Digital"/>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <title>Administração {{ $title or " " }}</title>
-    <link rel="stylesheet"
-          href="{{ asset('assets/dashboard/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css') }}" id="style-resource-1">
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/font-icons/entypo/css/entypo.css') }}" id="style-resource-2">
-    <link rel="stylesheet" href="{{ asset('css/base.min.css') }}" id="style-resource-2">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" id="style-resource-3">
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/neon-core.css') }}" id="style-resource-5">
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/neon-theme.css') }}" id="style-resource-6">
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/neon-forms.css') }}" id="style-resource-7">
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/custom.css') }}" id="style-resource-8">
-    <script src="{{ asset('assets/dashboard/js/jquery-1.11.3.min.js') }}"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    @include('dashboard.includes.styles')
 
     @yield('styles')
 </head>
@@ -195,22 +181,7 @@
 </div> <!-- Imported styles on this page -->
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-1.2.2.css') }}" id="style-resource-1">
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/rickshaw/rickshaw.min.css') }}" id="style-resource-2">
-<script src="{{ asset('assets/dashboard/js/gsap/TweenMax.min.js') }}" id="script-resource-1"></script>
-<script src="{{ asset('assets/dashboard/js/jquery-ui-1.10.3.minimal.min.js') }}" id="script-resource-2"></script>
-<script src="{{ asset('assets/dashboard/js/bootstrap.js') }}" id="script-resource-3"></script>
-<script src="{{ asset('assets/dashboard/js/joinable.js') }}" id="script-resource-4"></script>
-<script src="{{ asset('assets/dashboard/js/resizeable.js') }}" id="script-resource-5"></script>
-<script src="{{ asset('assets/dashboard/js/neon-api.js') }}" id="script-resource-6"></script>
-<script src="{{ asset('assets/dashboard/js/cookies.min.js') }}" id="script-resource-7"></script>
-<script src="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-1.2.2.min.js') }}" id="script-resource-8"></script>
-<script src="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-europe-merc-en.js') }}" id="script-resource-9"></script>
-<script src="{{ asset('assets/dashboard/js/jquery.sparkline.min.js') }}" id="script-resource-10"></script>
-<script src="{{ asset('assets/dashboard/js/rickshaw/vendor/d3.v3.js') }}" id="script-resource-11"></script>
-<script src="{{ asset('assets/dashboard/js/rickshaw/rickshaw.min.js') }}" id="script-resource-12"></script>
-<script src="{{ asset('assets/dashboard/js/raphael-min.js') }}" id="script-resource-13"></script>
-<script src="{{ asset('assets/dashboard/js/morris.min.js') }}" id="script-resource-14"></script>
-<script src="{{ asset('assets/dashboard/js/toastr.js') }}" id="script-resource-15"></script>
-<script src="{{ asset('assets/dashboard/js/neon-chat.js') }}" id="script-resource-16"></script>
+@include('dashboard.includes.scripts')
 <!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>
