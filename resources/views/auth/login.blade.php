@@ -46,5 +46,4 @@
     </div>
 @stop
 @section('scripts')
-    <script src="{{ asset('assets/dashboard/js/neon-login.js') }}"></script>
 @endsection
