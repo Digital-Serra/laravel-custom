@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PasswordResetTest extends TestCase
 {
@@ -33,33 +34,8 @@ class PasswordResetTest extends TestCase
     {
         $token = md5(uniqid("this is a test token"));
 
-        $this->visit('/password/reset/'.$token)
-            ->type('email@notexist.com', 'email')
-            ->type('12345678', 'password')
-            ->type('12345678', 'password_confirmation')
-            ->press('Redefinir credenciais')
-            ->seePageIs('/password/reset/'.$token)
-            ->see('Não conseguimos encontrar nenhum usuário com o endereço de e-mail especificado.');
-    }
+        $this->call('GET','/password/reset/'.$token);
 
-
-    /**
-     * Test password reset token route with existent user
-     *
-     * @return void
-     */
-    public function testPasswordResetTokenRouteWithExistentUser()
-    {
-        $this->insertTestUser('test','test@test.com','12345678');
-
-        $token = md5(uniqid("this is a test token"));
-
-        $this->visit('/password/reset/'.$token)
-            ->type('test@test.com', 'email')
-            ->type('12345678', 'password')
-            ->type('12345678', 'password_confirmation')
-            ->press('Redefinir credenciais')
-            ->seePageIs('/password/reset/'.$token)
-            ->see('Este código de recuperação de senha é inválido.');
+        $this->assertResponseStatus(404);
     }
 }
