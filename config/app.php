@@ -166,9 +166,9 @@ return [
         Collective\Remote\RemoteServiceProvider::class,
 
         /*
-         * Laracasts Flash
+         * Notification
          * */
-        Laracasts\Flash\FlashServiceProvider::class,
+        Krucas\Notification\NotificationServiceProvider::class,
 
         /*
          * L5-Repository
@@ -237,8 +237,8 @@ return [
         //Debugbar
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
-        //Laracasts Flash
-        'Flash' => Laracasts\Flash\Flash::class,
+        //Notification Flash
+        'Notification' => Krucas\Notification\Facades\Notification::class,
 
     ],
 
