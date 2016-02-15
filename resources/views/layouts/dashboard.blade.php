@@ -179,38 +179,21 @@
         </div>
     </div>
 </div> <!-- Imported styles on this page -->
-<link rel="stylesheet" href="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-1.2.2.css') }}" id="style-resource-1">
+<link rel="stylesheet" href="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-1.2.2.css') }}"
+      id="style-resource-1">
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/rickshaw/rickshaw.min.css') }}" id="style-resource-2">
 @include('dashboard.includes.scripts')
-<!-- JavaScripts initializations and stuff -->
+        <!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>
 <script src="{{ asset('assets/dashboard/js/neon-demo.js') }}" id="script-resource-18"></script>
 <script src="{{ asset('assets/dashboard/js/neon-skins.js') }}" id="script-resource-19"></script>
 
+@include('dashboard.includes.notifications')
+
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
-// Sample Toastr Notification
-        setTimeout(function () {
-            var opts = {
-                "closeButton": true,
-                "debug": false,
-                "positionClass": rtl() || public_vars.$pageContainer.hasClass('right-sidebar') ? "toast-top-left" : "toast-top-right",
-                "toastClass": "black",
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            };
-            toastr.success("You have been awarded with 1 year free subscription. Enjoy it!", "Account Subcription Updated", opts);
-        }, 3000);
-
-// Sparkline Charts
+    // Sparkline Charts
         $('.inlinebar').sparkline('html', {type: 'bar', barColor: '#ff6264'});
         $('.inlinebar-2').sparkline('html', {type: 'bar', barColor: '#445982'});
         $('.inlinebar-3').sparkline('html', {type: 'bar', barColor: '#00b19d'});
