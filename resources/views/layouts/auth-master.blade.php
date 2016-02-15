@@ -28,42 +28,11 @@
         <div></div>
     </div>
     <br><br>
-    <div class="row  text-center">
-        <div class="col-sm-6 col-sm-offset-3 text-center">
-            @if (Session::has('status'))
-                <div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
-                    {{ Session::get('status') }}
-                </div>
-            @endif
-
-            @unless($errors->isEmpty())
-                <ul style="list-style: none;">
-                    @foreach($errors->getMessages() as $error)
-                        <li>
-                            <p class="alert alert-danger">
-                                <a href="#" class="close" data-dismiss="alert"
-                                   aria-label="close">&times;</a>
-                                {{ $error[0] }}
-                            </p>
-                        </li>
-                    @endforeach
-                </ul>
-            @endunless
-            @if (Session::has('flash_notification.message'))
-                <div class="alert alert-{{ Session::get('flash_notification.level') }}">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
-                    {{ Session::get('flash_notification.message') }}
-                </div>
-            @endif
-        </div>
-    </div>
     @yield('body')
 
 </div>
 @include('dashboard.includes.scripts')
+@include('dashboard.includes.notifications')
 <!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>
