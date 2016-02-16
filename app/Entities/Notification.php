@@ -18,4 +18,9 @@ class Notification extends Model
      * @var array
      */
     protected $fillable = ['name', 'email', 'password'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
