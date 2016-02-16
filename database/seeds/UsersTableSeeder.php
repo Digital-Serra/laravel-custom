@@ -20,6 +20,6 @@ class UsersTableSeeder extends Seeder
              'updated_at'=> \Carbon\Carbon::now()
         ]);
 
-        factory(\App\Entities\User::class, 2);
+        factory(\App\Entities\User::class, 2)->create();
     }
 }
