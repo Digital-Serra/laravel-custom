@@ -40,8 +40,8 @@ class AuthTest extends TestCase
     public function testCanRegisterANewUser()
     {
         $this->visit('/register')
-            ->type('Test', 'name')
-            ->type('test@test.com', 'email')
+            ->type('Example', 'name')
+            ->type('example@example.com', 'email')
             ->type('12345678','password')
             ->type('12345678','password_confirmation')
             ->press('Registrar-se')
@@ -55,13 +55,12 @@ class AuthTest extends TestCase
      */
     public function testCanLoginUser()
     {
-        $this->insertTestUser('test','test@test.com','12345678');
-
         $this->visit('/login')
             ->type('test@test.com', 'email')
             ->type('12345678','password')
             ->check('remember')
             ->press('Entrar')
-            ->seePageIs('/dashboard');
+            ->seePageIs('/dashboard')
+            ->assertResponseStatus(200);
     }
 }
