@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="author" content="Mauri de Souza Nunes(github.com/mauri870) - Digital Serra Tecnologia Digital"/>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <title>Administração {{ $title or " " }}</title>
+    <title>Administração - {{ $title or " " }}</title>
 
     @include('dashboard.includes.styles')
 
