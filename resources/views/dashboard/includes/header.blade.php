@@ -11,7 +11,7 @@
                 <ul class="dropdown-menu"> <!-- Reverse Caret -->
                     <li class="caret"></li> <!-- Profile sub-links -->
                     <li>
-                        <a href="http://demo.neontheme.com/extra/timeline/">
+                        <a href="{{ route('dashboard.profile.edit') }}">
                             <i class="entypo-user"></i>
                             Editar Perfil
                         </a>
