@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\ProfileFormRequest;
 use App\Http\Controllers\Controller;
 
 class ProfileController extends Controller
@@ -62,14 +63,14 @@ class ProfileController extends Controller
         return view('dashboard.profile.edit');
     }
 
+
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param ProfileFormRequest $request
+     * @param $id
      */
-    public function update(Request $request, $id)
+    public function update(ProfileFormRequest $request)
     {
         //
     }
