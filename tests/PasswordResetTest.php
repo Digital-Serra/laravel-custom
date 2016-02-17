@@ -19,7 +19,7 @@ class PasswordResetTest extends TestCase
     public function testPasswordResetRouteWithNonexistentUser()
     {
         $this->visit('/password/email')
-            ->type('test@example.com', 'email')
+            ->type('blablabla@domain.com', 'email')
             ->press('Redefinir')
             ->seePageIs('/password/email')
             ->see('Não conseguimos encontrar nenhum usuário com o endereço de e-mail especificado.');
