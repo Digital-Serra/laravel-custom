@@ -25,11 +25,11 @@ class PasswordResetTest extends TestCase
     }
 
     /**
-     * Test password reset token route with nonexistent user
+     * Test password reset token route with nonexistent token
      *
      * @return void
      */
-    public function testPasswordResetTokenRouteWithNonexistentUser()
+    public function testPasswordResetTokenRouteWithNonExistentToken()
     {
         $token = md5(uniqid("this is a test token"));
 
