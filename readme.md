@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/Digital-Serra/laravel-custom.svg?branch=5.1)](https://travis-ci.org/Digital-Serra/laravel-custom)
 
-> For the newer dev layout and improvements use the [master branch](https://github.com/Digital-Serra/laravel-custom/tree/master)
-
 > For stable Laravel 5.1 use the [5.1 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.1)
 
 ## Diferences
