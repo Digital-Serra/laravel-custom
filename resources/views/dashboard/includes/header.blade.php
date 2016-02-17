@@ -5,7 +5,7 @@
             <li class="profile-info dropdown">
                 <!-- add class "pull-right" if you want to place this from right -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="{{ asset('assets/dashboard/images/thumb-1@2x.png') }}" alt="" class="img-circle" width="44"/>
+                    <img src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png" alt="" class="img-circle" width="44"/>
                     {{ $user }}
                 </a>
                 <ul class="dropdown-menu"> <!-- Reverse Caret -->
