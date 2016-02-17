@@ -45,7 +45,8 @@ class AuthTest extends TestCase
             ->type('12345678','password')
             ->type('12345678','password_confirmation')
             ->press('Registrar-se')
-            ->seePageIs('/dashboard');
+            ->seePageIs('/dashboard')
+            ->assertResponseStatus(200);
     }
 
     /**
