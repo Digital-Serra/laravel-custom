@@ -183,7 +183,7 @@
       id="style-resource-1">
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/rickshaw/rickshaw.min.css') }}" id="style-resource-2">
 @include('dashboard.includes.scripts')
-        <!-- JavaScripts initializations and stuff -->
+<!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>
 <script src="{{ asset('assets/dashboard/js/neon-demo.js') }}" id="script-resource-18"></script>
