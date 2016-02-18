@@ -9,12 +9,17 @@
     {!! Form::email('email', auth()->user()->email,['class'=>'form-control','placeholder'=>'email@example.com']) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('password', 'Senha') !!}
+    {!! Form::label('old_password', 'Senha atual') !!}
+
+    {!! Form::password('old_password',['class'=>'form-control','id'=>'old_password','placeholder'=>'***********']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('password', 'Nova senha') !!}
 
     {!! Form::password('password',['class'=>'form-control','id'=>'password','placeholder'=>'***********']) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('password_confirmation', 'Repita a Senha') !!}
+    {!! Form::label('password_confirmation', 'Repita a nova senha') !!}
 
     {!! Form::password('password_confirmation',['class'=>'form-control','id'=>'password','placeholder'=>'***********']) !!}
 </div>
