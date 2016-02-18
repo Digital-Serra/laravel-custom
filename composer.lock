@@ -54,23 +54,23 @@
         },
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v2.1.1",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "974fd16e328ca851a081449100d9509af59cf0ff"
+                "reference": "13b7058d2120c8d5af7f1ada21b7c44dd87b666a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/974fd16e328ca851a081449100d9509af59cf0ff",
-                "reference": "974fd16e328ca851a081449100d9509af59cf0ff",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/13b7058d2120c8d5af7f1ada21b7c44dd87b666a",
+                "reference": "13b7058d2120c8d5af7f1ada21b7c44dd87b666a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.0.17|5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "maximebf/debugbar": "~1.11.0",
-                "php": ">=5.4.0",
-                "symfony/finder": "~2.6|~3.0"
+                "php": ">=5.5.9",
+                "symfony/finder": "~2.7|~3.0"
             },
             "type": "library",
             "extra": {
@@ -104,7 +104,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2015-12-22 06:22:38"
+            "time": "2016-02-17 08:32:21"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -632,16 +632,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.29",
+            "version": "v5.1.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7e7ba568ffbc8f3f00778f2e8f41fb92127944fd"
+                "reference": "f00b80d4d33cf67815d1b4aaae8d4b47af2f2a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7e7ba568ffbc8f3f00778f2e8f41fb92127944fd",
-                "reference": "7e7ba568ffbc8f3f00778f2e8f41fb92127944fd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f00b80d4d33cf67815d1b4aaae8d4b47af2f2a2a",
+                "reference": "f00b80d4d33cf67815d1b4aaae8d4b47af2f2a2a",
                 "shasum": ""
             },
             "require": {
@@ -756,7 +756,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-02-02 14:56:40"
+            "time": "2016-02-17 18:00:25"
         },
         {
             "name": "laravelcollective/html",
