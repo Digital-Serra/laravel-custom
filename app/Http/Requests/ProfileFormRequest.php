@@ -34,7 +34,7 @@ class ProfileFormRequest extends Request
             case 'PUT': {
                 return [
                     'name' => 'required',
-                    'email' => 'required|unique:users,'.auth()->user()->email,
+                    'email' => 'required|unique:users,email,'.auth()->user()->id,
                     'password' => 'required|min:8|same:password_confirmation',
                     'password_confirmation' => 'required|min:8'
                 ];
