@@ -35,6 +35,7 @@ class ProfileFormRequest extends Request
                 return [
                     'name' => 'required',
                     'email' => 'required|unique:users,email,'.auth()->user()->id,
+                    'old_password' => 'required|min:8',
                     'password' => 'required|min:8|same:password_confirmation',
                     'password_confirmation' => 'required|min:8'
                 ];
@@ -46,6 +47,7 @@ class ProfileFormRequest extends Request
         return [
             'username' => 'nome de usuário',
             'email' => 'email',
+            'old_password' => 'senha atual',
             'password' => 'senha',
             'password_confirmation' => 'confirmação da senha'
         ];
