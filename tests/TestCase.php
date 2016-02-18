@@ -30,7 +30,7 @@ class TestCase extends BaseTest
      */
     public function createApplication()
     {
-        putenv('DB_CONNECTION=sqlite');
+        putenv('DB_CONNECTION=testing');
 
         $app = require __DIR__.'/../bootstrap/app.php';
 
