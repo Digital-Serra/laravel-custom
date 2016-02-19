@@ -6778,8 +6778,8 @@ float: left;
   background-color: #fad839;
   color: #fff;
 }
-.page-container.horizontal-menu header.navbar ul.nav > li.dropdown .dropdown-menu > li > ul > li.notification-danger > i,
-.page-container.horizontal-menu header.navbar ul.nav > li.dropdown .dropdown-menu > li > ul > li.notification-danger > a > i {
+.page-container.horizontal-menu header.navbar ul.nav > li.dropdown .dropdown-menu > li > ul > li.notification-error > i,
+.page-container.horizontal-menu header.navbar ul.nav > li.dropdown .dropdown-menu > li > ul > li.notification-error > a > i {
   background-color: #cc2424;
   color: #fff;
 }
@@ -7584,8 +7584,8 @@ float: left;
   background-color: #fad839;
   color: #fff;
 }
-.notifications.dropdown .dropdown-menu > li > ul > li.notification-danger > i,
-.notifications.dropdown .dropdown-menu > li > ul > li.notification-danger > a > i {
+.notifications.dropdown .dropdown-menu > li > ul > li.notification-error > i,
+.notifications.dropdown .dropdown-menu > li > ul > li.notification-error > a > i {
   background-color: #cc2424;
   color: #fff;
 }
