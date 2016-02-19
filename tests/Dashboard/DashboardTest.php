@@ -3,9 +3,12 @@
 namespace App\Tests\Dashboard;
 
 use App\Tests\TestCase;
+use App\Tests\Traits\Authenticate;
 
 class DashboardTest extends TestCase
 {
+    use Authenticate;
+
     /**
      * Test dashboard default route.
      *
@@ -13,9 +16,8 @@ class DashboardTest extends TestCase
      */
     public function testDefaultRoute()
     {
-       $this->authenticate();
-
-       $this->visit('/dashboard')
+        $this->visit('/dashboard')
+           ->seePageIs('/dashboard')
            ->assertResponseStatus(200);
     }
 }

@@ -4,9 +4,12 @@ namespace App\Tests\Dashboard;
 
 use App\Entities\User;
 use App\Tests\TestCase;
+use App\Tests\Traits\Authenticate;
 
 class ProfileTest extends TestCase
 {
+    use Authenticate;
+
     /**
      * Test profile edit route.
      *
@@ -14,10 +17,11 @@ class ProfileTest extends TestCase
      */
     public function testProfileEditRoute()
     {
-       $this->authenticate();
-
-       $this->visit('/dashboard/profile/edit')
-           ->see('Editar Perfil');
+       $this->visit('/dashboard')
+           ->click('Editar Perfil')
+           ->seePageIs('/dashboard/profile/edit')
+           ->see('Editar Perfil')
+           ->assertResponseStatus(200);
     }
 
     /**
@@ -27,8 +31,6 @@ class ProfileTest extends TestCase
      */
     public function testCanUpdateProfile()
     {
-       $this->authenticate();
-
        $this->visit('/dashboard/profile/edit')
            ->type('ThisIsATest','name')
            ->type('this@isatest.com','email')
