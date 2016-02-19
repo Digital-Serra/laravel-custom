@@ -14,7 +14,7 @@ use Illuminate\Foundation\Console\Kernel;
 
 class TestCase extends BaseTest
 {
-    use DatabaseMigrations, DatabaseSeeds, InteractsWithUser;
+    use DatabaseMigrations, DatabaseTransactions, DatabaseSeeds, InteractsWithUser;
 
     /**
      * The base URL to use while testing the application.
