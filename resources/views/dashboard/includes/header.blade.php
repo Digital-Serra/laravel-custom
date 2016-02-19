@@ -32,27 +32,19 @@
                         </p></li>
                     <li>
                         <ul class="dropdown-menu-list scroller">
-                            <li class="unread notification-success"><a href="#">
-                                    <i class="entypo-user-add pull-right"></i>
-                                            <span class="line">
-                                                <strong>New user registered</strong>
-                                            </span>
-                                            <span class="line small">
-                                                30 seconds ago
-                                            </span>
-                                </a>
-                            </li>
-                            <li class="unread notification-secondary">
-                                <a href="#">
-                                    <i class="entypo-heart pull-right"></i>
-                                            <span class="line">
-                                                <strong>Someone special liked this</strong>
-                                            </span>
-                                            <span class="line small">
-                                                2 minutes ago
-                                            </span>
-                                </a>
-                            </li>
+                            @foreach(notifications() as $notification)
+                                <li class="unread notification-{{ $notification->type }}"><a href="#">
+                                        <i class="entypo-info pull-right"></i>
+                                                <span class="line">
+                                                    <strong>{{ $notification->title }}</strong><br>
+                                                    {{ $notification->body }}
+                                                </span>
+                                                <span class="line small">
+                                                    {{ $notification->created_at->diffForHumans() }}
+                                                </span>
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="external">
