@@ -39,5 +39,7 @@ trait InteractsWithUser
      */
     public function authenticate($email = 'test@test.com', $password = '12345678'){
         Auth::attempt(['email' => $email, 'password' => $password]);
+
+        return true;
     }
 }
