@@ -30,7 +30,7 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'SetGlobalAuthVariables' => \App\Http\Middleware\SetGlobalAuthVariables::class,
-        'checkTokenExists' => \App\Http\Middleware\CheckTokenExists::class
+        'checkTokenExists' => \App\Http\Middleware\CheckTokenExists::class,
+        'shareDashVarsToView' => \App\Http\Middleware\ShareDashVarsToView::class,
     ];
 }
