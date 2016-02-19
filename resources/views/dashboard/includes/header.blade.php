@@ -5,7 +5,8 @@
             <li class="profile-info dropdown">
                 <!-- add class "pull-right" if you want to place this from right -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png" alt="" class="img-circle" width="44"/>
+                    <img src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png" alt=""
+                         class="img-circle" width="44"/>
                     {{ $user }}
                 </a>
                 <ul class="dropdown-menu"> <!-- Reverse Caret -->
@@ -21,7 +22,8 @@
         </ul>
         <ul class="user-info pull-left pull-right-xs pull-none-xsm"> <!-- Raw Notifications -->
             <li class="notifications dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
                     <i class="entypo-mail"></i>
                     <span class="badge badge-secondary">6</span>
                 </a>
@@ -32,16 +34,16 @@
                         </p></li>
                     <li>
                         <ul class="dropdown-menu-list scroller">
-                            @foreach(notifications() as $notification)
+                            @foreach($notifications as $notification)
                                 <li class="unread notification-{{ $notification->type }}"><a href="#">
                                         <i class="entypo-info pull-right"></i>
-                                                <span class="line">
-                                                    <strong>{{ $notification->title }}</strong><br>
-                                                    {{ $notification->body }}
-                                                </span>
-                                                <span class="line small">
-                                                    {{ $notification->created_at->diffForHumans() }}
-                                                </span>
+                                        <span class="line">
+                                            <strong>{{ $notification->title }}</strong><br>
+                                            {{ $notification->body }}
+                                        </span>
+                                        <span class="line small">
+                                            {{ $notification->created_at->diffForHumans() }}
+                                        </span>
                                     </a>
                                 </li>
                             @endforeach

@@ -1,9 +1,8 @@
 <?php
 /*
- * Load your own helpers
+ * Require your own helpers
  *
  * */
 
-require __DIR__."/../Helpers/Notifications.php";
 
 
