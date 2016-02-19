@@ -36,7 +36,8 @@ class ProfileTest extends TestCase
            ->type('87654321','password')
            ->type('87654321','password_confirmation')
            ->press('Atualizar perfil')
-           ->seePageIs('/dashboard/profile/edit');
+           ->seePageIs('/dashboard/profile/edit')
+           ->assertResponseStatus(200);
 
         $this->assertEquals('ThisIsATest', User::where('name','ThisIsATest')->first()->name);
 
