@@ -54,6 +54,10 @@ return [
 
     'locale' => 'pt-BR',
 
+
+    //Set carbon Language
+    \Carbon\Carbon::setLocale('pt_BR'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
