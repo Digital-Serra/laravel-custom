@@ -6,34 +6,20 @@ use App\Tests\AbstractTestCase;
 
 class AuthTest extends AbstractTestCase
 {
-    /**
-     * Test app login route.
-     *
-     * @return void
-     */
-    public function testLoginRoute()
+
+    public function test_login_route()
     {
         $this->visit('/login')
             ->see('Faça Login para acessar o Sistema');
     }
 
-    /**
-     * Test app register route.
-     *
-     * @return void
-     */
-    public function testRegisterRoute()
+    public function test_register_route()
     {
         $this->visit('/register')
             ->see('Registre-se');
     }
 
-    /**
-     * Test can register a new user.
-     *
-     * @return void
-     */
-    public function testCanRegisterANewUser()
+    public function test_can_register_a_new_user()
     {
         $this->visit('/register')
             ->type('Example', 'name')
@@ -45,12 +31,7 @@ class AuthTest extends AbstractTestCase
             ->assertResponseStatus(200);
     }
 
-    /**
-     * Test can login an user.
-     *
-     * @return void
-     */
-    public function testCanLoginUser()
+    public function test_can_login_an_existent_user()
     {
         $this->visit('/login')
             ->type('test@test.com', 'email')
