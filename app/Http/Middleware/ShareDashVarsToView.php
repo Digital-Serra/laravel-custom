@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Entities\Notification;
+use App\Entities\User;
 use Closure;
 
 class ShareDashVarsToView
@@ -18,7 +18,7 @@ class ShareDashVarsToView
     {
         if(auth()->check()){
             view()->share('user', auth()->user()->name);
-            view()->share('notifications',Notification::all());
+            view()->share('notifications',auth()->user()->notifications()->orderBy('id','desc')->take(10)->get());
         }
 
         return $next($request);
