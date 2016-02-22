@@ -3,11 +3,11 @@
 namespace App\Tests\Dashboard;
 
 use App\Tests\AbstractTestCase;
-use App\Tests\Traits\Authenticate;
+use App\Tests\Traits\AuthenticateUser;
 
 class DashboardTest extends AbstractTestCase
 {
-    use Authenticate;
+    use AuthenticateUser;
 
     /**
      * Test dashboard default route.

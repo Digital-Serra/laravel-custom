@@ -4,11 +4,11 @@ namespace App\Tests\Dashboard;
 
 use App\Entities\User;
 use App\Tests\AbstractTestCase;
-use App\Tests\Traits\Authenticate;
+use App\Tests\Traits\AuthenticateUser;
 
 class ProfileTest extends AbstractTestCase
 {
-    use Authenticate;
+    use AuthenticateUser;
 
     /**
      * Test profile edit route.
