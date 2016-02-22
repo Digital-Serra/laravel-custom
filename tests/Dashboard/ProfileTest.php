@@ -10,12 +10,7 @@ class ProfileTest extends AbstractTestCase
 {
     use AuthenticateUser;
 
-    /**
-     * Test profile edit route.
-     *
-     * @return void
-     */
-    public function testProfileEditRoute()
+    public function test_profile_edit_route()
     {
        $this->visit('/dashboard')
            ->click('Editar Perfil')
@@ -24,12 +19,7 @@ class ProfileTest extends AbstractTestCase
            ->assertResponseStatus(200);
     }
 
-    /**
-     * Test can update a profile.
-     *
-     * @return void
-     */
-    public function testCanUpdateProfile()
+    public function test_can_update_profile()
     {
        $this->visit('/dashboard/profile/edit')
            ->type('ThisIsATest','name')
