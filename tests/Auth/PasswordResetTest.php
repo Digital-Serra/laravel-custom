@@ -2,15 +2,9 @@
 
 namespace App\Tests\Auth;
 
-use App\Entities\User;
-use App\Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+use App\Tests\AbstractTestCase;
 
-class PasswordResetTest extends TestCase
+class PasswordResetTest extends AbstractTestCase
 {
     /**
      * Test password reset route with nonexistent user

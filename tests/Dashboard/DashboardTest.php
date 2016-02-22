@@ -2,10 +2,10 @@
 
 namespace App\Tests\Dashboard;
 
-use App\Tests\TestCase;
+use App\Tests\AbstractTestCase;
 use App\Tests\Traits\Authenticate;
 
-class DashboardTest extends TestCase
+class DashboardTest extends AbstractTestCase
 {
     use Authenticate;
 

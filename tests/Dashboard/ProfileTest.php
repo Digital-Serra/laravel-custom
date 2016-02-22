@@ -3,10 +3,10 @@
 namespace App\Tests\Dashboard;
 
 use App\Entities\User;
-use App\Tests\TestCase;
+use App\Tests\AbstractTestCase;
 use App\Tests\Traits\Authenticate;
 
-class ProfileTest extends TestCase
+class ProfileTest extends AbstractTestCase
 {
     use Authenticate;
 

@@ -2,14 +2,9 @@
 
 namespace App\Tests\FrontPages;
 
-use App\Entities\User;
-use App\Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\Auth;
+use App\Tests\AbstractTestCase;
 
-class AppTest extends TestCase
+class AppTest extends AbstractTestCase
 {
     /**
      * Test app base route.
