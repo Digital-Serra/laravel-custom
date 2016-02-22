@@ -11,7 +11,7 @@ class AppTest extends AbstractTestCase
      *
      * @return void
      */
-    public function testBaseRoute()
+    public function test_base_route()
     {
         $this->visit('/')
              ->see('Laravel 5');
