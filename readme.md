@@ -15,7 +15,6 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Repository Layer
 * IDE Helper Files for Facades, Models and PhpStorm autocompletation
 * Service Layer
-* Laracasts/Flash (Flash messages)
 * Laravel Collective Remote
 * Artisan Command for git pull on remote server
 * Debugbar
