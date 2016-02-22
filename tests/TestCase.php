@@ -12,7 +12,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTest;
 use Illuminate\Foundation\Console\Kernel;
 
-class TestCase extends BaseTest
+abstract class TestCase extends BaseTest
 {
     use DatabaseMigrations, DatabaseTransactions, DatabaseSeeds, InteractsWithUser;
 
