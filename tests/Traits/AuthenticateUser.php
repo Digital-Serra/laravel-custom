@@ -11,7 +11,7 @@ namespace App\Tests\Traits;
 use App\Entities\User;
 use Illuminate\Support\Facades\Auth;
 
-trait Authenticate
+trait AuthenticateUser
 {
     /**
      * Authenticate a user
