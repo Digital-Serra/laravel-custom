@@ -14,7 +14,7 @@ class DashboardTest extends AbstractTestCase
      *
      * @return void
      */
-    public function testDefaultRoute()
+    public function test_default_route()
     {
         $this->visit('/dashboard')
            ->seePageIs('/dashboard')
