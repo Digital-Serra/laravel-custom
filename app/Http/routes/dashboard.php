@@ -9,5 +9,5 @@ Route::group(['middleware' => ['auth','shareDashVarsToView'],'namespace'=>'Dashb
         Route::put('/edit',['as'=>'dashboard.profile.update','uses'=>'ProfileController@update']);
     });
 
-    Route::resource('notifications','NotificationController',['only'=>['show']]);
+    Route::resource('notifications','NotificationController',['only'=>['index']]);
 });
