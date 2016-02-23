@@ -21,57 +21,22 @@
             </div>
         </header>
         <ul id="main-menu" class="main-menu">
-            <li class="active opened active has-sub"><a href="{{ asset('dashboard.index') }}">
-                    <i class="entypo-gauge"></i>
-                        <span class="title">
-                            Dashboard
-                        </span>
+            <li class="root-level">
+                <a href="{{ route('dashboard.index') }}">
+                    <i class="entypo-home"></i>
+                    <span class="title">
+                        Início
+                    </span>
                 </a>
-                <ul class="visible">
-                    <li class="active">
-                        <a href="{{ asset('dashboard.index') }}">
-                            <span class="title">Dashboard 1</span>
-                        </a>
-                    </li>
+            </li>
+            <li class="has-sub root-level"><a href="#"><i
+                            class="entypo-layout"></i><span class="title">Test</span></a>
+                <ul class="" style="opacity: 0.2; height: 0px;">
                     <li>
-                        <a href="http://demo.neontheme.com/dashboard/main-2/">
-                            <span class="title">Dashboard 2</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://demo.neontheme.com/dashboard/main-3/">
-                                <span class="title">
-                                    Dashboard 3
-                                </span>
-                        </a>
-                    </li>
-                    <li class="has-sub">
-                        <a href="http://demo.neontheme.com/skins/black/">
-                                <span class="title">
-                                    Skins
-                                </span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="http://demo.neontheme.com/skins/facebook/">
-                                        <span class="title">
-                                            Facebook Skin
-                                        </span>
-                                        <span class="badge badge-secondary badge-roundless">
-                                            New
-                                        </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="http://demo.neontheme.com/dashboard/highlights/">
-                                <span class="title">
-                                    What's New
-                                </span>
-                                <span class="badge badge-success badge-roundless">
-                                    v2.0
-                                </span>
+                        <a href="#">
+                            <span class="title">
+                                Test opened
+                            </span>
                         </a>
                     </li>
                 </ul>
