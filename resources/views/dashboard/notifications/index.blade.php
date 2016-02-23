@@ -11,7 +11,7 @@
         @foreach($notifications as $notification)
             <article class="timeline-entry {{ $notification->id %2 == 0 ? '' : 'left-aligned' }}">
                 <div class="timeline-entry-inner">
-                    <time class="timeline-time"><span>{{ $notification->created_at->diffForHumans() }}</span> <span>Today</span>
+                    <time class="timeline-time"><span>{{ $notification->created_at->diffForHumans() }}</span>
                     </time>
                     <div class="timeline-icon bg-{{ $notification->type }}"><i class="entypo-{{ $notification->getIcon() }}"></i></div>
                     <div class="timeline-label">
