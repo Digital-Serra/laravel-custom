@@ -50,8 +50,8 @@
                         </ul>
                     </li>
                     <li class="external">
-                        <a href="#">
-                            View all notifications
+                        <a href="{{ route('dashboard.notifications.index') }}">
+                            Todas as notificações
                         </a>
                     </li>
                 </ul>
