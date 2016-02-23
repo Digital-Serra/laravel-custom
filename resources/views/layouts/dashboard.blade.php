@@ -13,7 +13,7 @@
     @yield('styles')
 </head>
 <body class="page-body page-fade" data-url="{{ env('APP_URL') }}">
-<div class="page-container">
+<div class="page-container sidebar-collapsed">
     @include('dashboard.includes.menu')
     <div class="main-content">
         @include('dashboard.includes.header')
