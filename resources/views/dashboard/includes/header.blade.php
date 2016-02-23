@@ -25,12 +25,12 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                    data-close-others="true">
                     <i class="entypo-mail"></i>
-                    <span class="badge badge-secondary">6</span>
+                    <span class="badge badge-secondary">{!! Notify::getNotificationCount() !!}</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="top">
-                        <p class="small"><a href="#" class="pull-right">Mark all Read</a>
-                            You have <strong>3</strong> new notifications.
+                        <p class="small">
+                            You have <strong>{!! Notify::getNotificationCount() !!}</strong> new notifications.
                         </p></li>
                     <li>
                         <ul class="dropdown-menu-list scroller">
