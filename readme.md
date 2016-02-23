@@ -54,6 +54,22 @@ This package is a standard laravel 5.1.* installation, but with some additional 
     
     Get template options and layouts at [NEON Dashboard Theme](http://demo.neontheme.com/dashboard/main/)
 
+## Notifications
+
+Set new persistent notifications with:
+    
+```php
+Notify::set('title','type','message')
+```
+Type must be one of: info, success, error or warning
+You can automatically set a session message passing `true` as the fourth argument:
+```php
+Notify::set('title','type','message',true)
+```
+This will create a session notification based on: [edvinaskrucas/notification](https://github.com/edvinaskrucas/notification)
+You can get the number of new notifications created on the latest request using `Notify::getNotificationCount()`
+
+
 #### License
 
 The Laravel framework and this package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
