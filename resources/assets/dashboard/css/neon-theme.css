@@ -6264,7 +6264,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   background-color: #303641;
   color: #fff;
 }
-.page-body .main-content .cbp_tmtimeline > li .cbp_tmicon.bg-secondary {
+.page-body .main-content .cbp_tmtimeline > li .cbp_tmicon.bg-error {
   background-color: #ee4749;
   color: #fff;
 }
@@ -6476,7 +6476,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   background-color: #303641;
   color: #fff;
 }
-.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-error {
   background-color: #ee4749;
   color: #fff;
 }
