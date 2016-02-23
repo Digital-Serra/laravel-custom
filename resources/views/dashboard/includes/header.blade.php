@@ -30,7 +30,7 @@
                 <ul class="dropdown-menu">
                     <li class="top">
                         <p class="small">
-                            You have <strong>{!! Notify::getNotificationCount() !!}</strong> new notifications.
+                            Você tem <strong>{!! Notify::getNotificationCount() !!}</strong> novas notificações.
                         </p></li>
                     <li>
                         <ul class="dropdown-menu-list scroller">
