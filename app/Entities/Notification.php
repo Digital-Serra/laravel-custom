@@ -19,8 +19,33 @@ class Notification extends Model
      */
     protected $fillable = ['type', 'title', 'body','user_id'];
 
+
+    /**
+     * Relation between Users and Notifications
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Return a entypo icon name
+     *
+     * @return string
+     */
+    public function getIcon()
+    {
+        switch($this->type){
+            case 'error':
+                return 'cancel';
+            case 'success':
+                return 'check';
+            case 'warning':
+                return 'alert';
+            case 'info':
+                return 'info';
+        }
     }
 }
