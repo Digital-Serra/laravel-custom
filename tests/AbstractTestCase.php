@@ -2,17 +2,14 @@
 
 namespace App\Tests;
 
-use App\Entities\User;
 use App\Tests\Traits\DatabaseSeeds;
 use App\Tests\Traits\InteractsWithUser;
-use App\Tests\Traits\InteractsWithUsers;
-use Carbon\Carbon;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTest;
 use Illuminate\Foundation\Console\Kernel;
+use Illuminate\Foundation\Testing\TestCase;
 
-abstract class AbstractTestCase extends BaseTest
+abstract class AbstractTestCase extends TestCase
 {
     use DatabaseMigrations, DatabaseTransactions, DatabaseSeeds, InteractsWithUser;
 
