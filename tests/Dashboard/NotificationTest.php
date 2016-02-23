@@ -15,6 +15,12 @@ class NotificationTest extends AbstractTestCase
 {
     use AuthenticateUser;
 
+    public function test_can_view_notifications_page()
+    {
+        $this->visit('dashboard/notifications')
+            ->see('Notificações');
+    }
+
     public function test_can_set_a_new_notification()
     {
         Notify::set('title','info','This is a test message');
