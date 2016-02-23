@@ -28,7 +28,7 @@ class NotificationTest extends AbstractTestCase
 
         $this->seeInDatabase('notifications',['body'=>'This is a test message','title' => 'title','type' => 'info']);
 
-        $this->assertInternalType('int', Notify::getNotificationCount());
+        $this->assertEquals(1, Notify::getNotificationCount());
     }
 
     public function test_can_count_multiple_flash_notifications()
@@ -37,18 +37,20 @@ class NotificationTest extends AbstractTestCase
 
         Notify::set('title2','success','This is a second test message',true);
 
-        $this->assertEquals(2, Notify::getNotificationCount());
+        Notify::set('title3','warning','This is a third test message',true);
+
+        $this->assertEquals(3, Notify::getNotificationCount());
     }
 
-    public function test_notification_types()
+    public function test_notification_types_in_database()
     {
         $types = ['info','success','error','warning'];
 
         foreach($types as $type){
-            Notify::set('title',$type,'This is a test message for '.$type.' label', true);
-        }
+            Notify::set('title',$type,'This is a test message for '.$type.' label');
 
-        $this->assertEquals(count($types), Notify::getNotificationCount());
+            $this->seeInDatabase('notifications',['title'=>'title','type'=>$type,'body'=>'This is a test message for '.$type.' label']);
+        }
     }
 
     public function test_can_set_a_new_notification_with_wrong_type()
@@ -57,5 +59,4 @@ class NotificationTest extends AbstractTestCase
 
         Notify::set('title','wrong_type','This is a test message',true);
     }
-
 }
