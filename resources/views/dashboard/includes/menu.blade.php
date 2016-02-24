@@ -29,13 +29,15 @@
                     </span>
                 </a>
             </li>
-            <li class="has-sub root-level"><a href="#"><i
-                            class="entypo-layout"></i><span class="title">Test</span></a>
+            <li class="has-sub root-level">
+                <a href="#">
+                    <i class="entypo-mail"></i>
+                    <span class="title">Email</span></a>
                 <ul class="" style="opacity: 0.2; height: 0px;">
                     <li>
-                        <a href="#">
+                        <a href="{{ route('dashboard.mail.create') }}">
                             <span class="title">
-                                Test opened
+                                Novo Email
                             </span>
                         </a>
                     </li>
