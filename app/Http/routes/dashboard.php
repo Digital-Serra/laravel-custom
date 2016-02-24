@@ -10,4 +10,6 @@ Route::group(['middleware' => ['auth','shareDashVarsToView'],'namespace'=>'Dashb
     });
 
     Route::resource('notifications','NotificationController',['only'=>['index']]);
+
+    Route::resource('mail','MailController',['only'=>['create']]);
 });
