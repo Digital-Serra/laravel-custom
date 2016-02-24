@@ -3500,8 +3500,7 @@ hr + .mail-env {
   height: 40px;
 }
 .mail-env .mail-body {
-  width: 78%;
-  float: right;
+  width: 100%;
   overflow: hidden;
 }
 .mail-env .mail-body .mail-header {
