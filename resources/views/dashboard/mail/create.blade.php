@@ -23,33 +23,32 @@
                 </div>
             </div>
             <div class="mail-compose">
-                <form method="post" role="form" id="mail-form">
-                    <div class="form-group"><label for="to">To:</label> <input type="text" class="form-control"
-                                                                               id="to" tabindex="1"/>
-                        <div class="field-options"><a href="javascript:;"
-                                                      onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();">CC</a>
+                {!! Form::open(['route'=>'dashboard.mail.store','method'=>'post','id'=>'mail-form']) !!}
+                    <div class="form-group">
+                        {!! Form::label('to','Para:') !!}
+                        <input type="text" class="form-control" id="to" tabindex="1" placeholder="email1,email2,email3"/>
+                        <div class="field-options">
+                            <a href="javascript:;" onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();" title="Cópia">CC</a>
                             <a href="javascript:;"
-                               onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();">BCC</a>
+                               onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();" title="Cópia Oculta">BCC</a>
                         </div>
                     </div>
                     <div class="form-group hidden">
-                        <label for="cc">CC:</label>
-                        <input type="text" class="form-control" id="cc" tabindex="2"/>
+                        {!! Form::label('cc','Cópia:') !!}
+                        <input type="text" class="form-control" placeholder="email1,email2,email3" id="cc" tabindex="2"/>
                     </div>
                     <div class="form-group hidden">
-                        <label for="bcc">BCC:</label>
-                        <input type="text" class="form-control" id="bcc" tabindex="2"/>
+                        {!! Form::label('bcc','Cópia Oculta:') !!}
+                        <input type="text" class="form-control" placeholder="email1,email2,email3" id="bcc" tabindex="2"/>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject:</label>
+                        {!! Form::label('subject','Assunto:') !!}
                         <input type="text" class="form-control" id="subject" tabindex="1"/>
                     </div>
                     <div class="compose-message-editor">
-                        <textarea class="form-control wysihtml5" data-stylesheet-url="{{ asset('assets/dashboard/wysihtml5/wysihtml5-color.css') }}" name="sample_wysiwyg" id="sample_wysiwyg">
-
-                        </textarea>
+                        {!! Form::textarea('message',null,['class'=>'form-control wysihtml5','data-stylesheet-url'=>asset('assets/dashboard/wysihtml5/wysihtml5-color.css'),'id'=>'sample_wysiwyg']) !!}
                     </div>
-                </form>
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
