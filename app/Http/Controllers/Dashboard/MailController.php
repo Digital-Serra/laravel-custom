@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Notifications\Facades\Notify;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Requests\MailFormRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 
 class MailController extends Controller
 {
@@ -39,13 +43,37 @@ class MailController extends Controller
      */
     public function store(MailFormRequest $request)
     {
-        dd($request->all());
+        Mail::send('dashboard.templates.mail',
+            [
+                'message' => $request->get('message')
+            ], function ($message) use ($request) {
+                $message->from(env('MAIL_USERNAME', null));
+                $message->to($request->get('to'), null);
+
+                if($request->get('cc') != ''){
+                    $message->cc($request->get('cc'));
+                }
+
+                if($request->get('bcc') != ''){
+                    $message->bcc($request->get('bcc'));
+                }
+
+                $message->subject($request->get('subject'));
+            });
+
+        //Log Users action
+        Log::info('Email send in dashboard from '.$request->getClientIp(). ' to '.$request->get('to'));
+
+        Notify::set('Sucesso','success','Email para '.$request->get('to').' enviado com sucesso!',true);
+
+        return redirect()
+            ->route('dashboard.mail.create');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -56,7 +84,7 @@ class MailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -67,8 +95,8 @@ class MailController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -79,7 +107,7 @@ class MailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
