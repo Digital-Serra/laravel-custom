@@ -1,19 +1,27 @@
 <div class="form-group">
     {!! Form::label('to','Para:') !!}
-    {!! Form::text('to',null,['class'=>'form-control','id'=>'to','tabindex'=>'1','placeholder'=>'email1,email2,email3']) !!}
+    {!! Form::text('to',null,['class'=>'form-control','id'=>'to','tabindex'=>'1','placeholder'=>'email@dominio.com']) !!}
     <div class="field-options">
-        <a href="javascript:;" onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();" title="Cópia">CC</a>
+        <a href="javascript:;" onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();" title="Cópia" id="cc-show">CC</a>
         <a href="javascript:;"
-           onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();" title="Cópia Oculta">BCC</a>
+           onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();" title="Cópia Oculta" id="bcc-show">BCC</a>
     </div>
 </div>
 <div class="form-group hidden">
     {!! Form::label('cc','Cópia:') !!}
-    {!! Form::text('cc',null,['class'=>'form-control','id'=>'cc','tabindex'=>'2','placeholder'=>'email1,email2,email3']) !!}
+    {!! Form::text('cc[]',null,['class'=>'form-control','id'=>'cc','tabindex'=>'2','placeholder'=>'email@dominio.com']) !!}
+    <div class="field-options">
+        <a href="javascript:;"
+           onclick="$('#cc-show').show(); $('#cc').parent().addClass('hidden'); $('#cc').val('');" title="Excluir" class="danger"><i class="entypo-cancel"></i></a>
+    </div>
 </div>
 <div class="form-group hidden">
     {!! Form::label('bcc','Cópia Oculta:') !!}
-    {!! Form::text('bcc',null,['class'=>'form-control','id'=>'bcc','tabindex'=>'3','placeholder'=>'email1,email2,email3']) !!}
+    {!! Form::text('bcc',null,['class'=>'form-control','id'=>'bcc','tabindex'=>'3','placeholder'=>'email@dominio.com']) !!}
+    <div class="field-options">
+        <a href="javascript:;"
+           onclick="$('#bcc-show').show(); $('#bcc').parent().addClass('hidden'); $('#bcc').val('');" title="Excluir" class="danger"><i class="entypo-cancel"></i></a>
+    </div>
 </div>
 <div class="form-group">
     {!! Form::label('subject','Assunto:') !!}
