@@ -25,15 +25,12 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * pt-BR language
 
 ### Installation
-* Clone the repo
-    ```
-    git clone https://github.com/Digital-Serra/laravel-custom.git -b 5.1
-    ```
-* Install the dependencies
-    ```
-    composer install
-    ```
 
+```
+composer create-project digitalserra/laravel-custom project-name "dev-master@dev"
+``` 
+    
+* Install the prerequisites
     ```
     npm install
     ```
@@ -49,8 +46,6 @@ This package is a standard laravel 5.1.* installation, but with some additional 
     ```
     php artisan migrate
     ```
-
-    Enjoy!
     
     Get template options and layouts at [NEON Dashboard Theme](http://demo.neontheme.com/dashboard/main/)
 
