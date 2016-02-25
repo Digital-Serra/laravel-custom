@@ -466,49 +466,49 @@
     var locale = $.fn.wysihtml5.locale = {
         en: {
             font_styles: {
-                normal: "Normal text",
-                h1: "Heading 1",
-                h2: "Heading 2",
-                h3: "Heading 3",
-                h4: "Heading 4",
-                h5: "Heading 5",
-                h6: "Heading 6"
+                normal: "Texto Normal",
+                h1: "Título 1",
+                h2: "Título 2",
+                h3: "Título 3",
+                h4: "Título 4",
+                h5: "Título 5",
+                h6: "Título 6"
             },
             emphasis: {
-                bold: "Bold",
-                italic: "Italic",
-                underline: "Underline"
+                bold: "Negrito",
+                italic: "Itálico",
+                underline: "Sublinhado"
             },
             lists: {
-                unordered: "Unordered list",
-                ordered: "Ordered list",
-                outdent: "Outdent",
-                indent: "Indent"
+                unordered: "Lista Não Ordenada",
+                ordered: "Lista Ordenada",
+                outdent: "Recuar",
+                indent: "Identar"
             },
             link: {
-                insert: "Insert link",
-                cancel: "Cancel",
-                target: "Open link in new window"
+                insert: "Inserir Link",
+                cancel: "Cancelar",
+                target: "Abrir link em uma nova aba"
             },
             image: {
-                insert: "Insert image",
-                cancel: "Cancel"
+                insert: "Inserir imagem",
+                cancel: "Cancelar"
             },
             html: {
-                edit: "Edit HTML"
+                edit: "Editar HTML"
             },
             colours: {
-                black: "Black",
-                silver: "Silver",
-                gray: "Grey",
-                maroon: "Maroon",
-                red: "Red",
-                purple: "Purple",
-                green: "Green",
-                olive: "Olive",
-                navy: "Navy",
-                blue: "Blue",
-                orange: "Orange"
+                black: "Preto",
+                silver: "Prata",
+                gray: "Cinza",
+                maroon: "Marrom",
+                red: "Vermelho",
+                purple: "Roxo",
+                green: "Verde",
+                olive: "Oliva",
+                navy: "Azul Royal",
+                blue: "Azul",
+                orange: "Laranja"
             }
         }
     };
