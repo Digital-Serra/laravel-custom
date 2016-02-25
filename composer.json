@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "digitalserra/laravel-custom",
+    "description": "Laravel custom package with pre-installed components",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
