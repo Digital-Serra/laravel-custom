@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\MailFormRequest;
 use App\Http\Controllers\Controller;
 
 class MailController extends Controller
@@ -33,12 +34,12 @@ class MailController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param MailFormRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MailFormRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
