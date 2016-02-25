@@ -14,7 +14,7 @@
 </head>
 <body class="page-body page-fade">
 <div class="page-container">
-    @include('dashboard.includes.menu')
+    @include('dashboard.includes.sidebar')
     <div class="main-content">
         @include('dashboard.includes.header')
         <hr/>
