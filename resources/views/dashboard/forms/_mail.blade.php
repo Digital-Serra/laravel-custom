@@ -9,7 +9,7 @@
 </div>
 <div class="form-group hidden">
     {!! Form::label('cc','Cópia:') !!}
-    {!! Form::text('cc[]',null,['class'=>'form-control','id'=>'cc','tabindex'=>'2','placeholder'=>'email@dominio.com']) !!}
+    {!! Form::text('cc',null,['class'=>'form-control','id'=>'cc','tabindex'=>'2','placeholder'=>'email@dominio.com']) !!}
     <div class="field-options">
         <a href="javascript:;"
            onclick="$('#cc-show').show(); $('#cc').parent().addClass('hidden'); $('#cc').val('');" title="Excluir" class="danger"><i class="entypo-cancel"></i></a>
