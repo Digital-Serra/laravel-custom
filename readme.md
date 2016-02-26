@@ -49,6 +49,11 @@ composer create-project digitalserra/laravel-custom project-name "dev-master@dev
     
     Get template options and layouts at [NEON Dashboard Theme](http://demo.neontheme.com/dashboard/main/)
 
+## Docker
+
+This skeleton comes with docker containers preconfigured. See `docker-compose.yml` for adding or removing containers.
+For start your containers simply run `./docker-up.sh`.
+
 ## Notifications
 
 Set new persistent notifications with:
