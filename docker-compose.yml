@@ -1,0 +1,30 @@
+web:
+  container_name: nginx
+  image: dydx/alpine-nginx-phpfpm
+  ports:
+    - "80:80"
+  volumes:
+    - ./:/var/www
+    - ./nginx-sites:/etc/nginx/sites-enabled
+  links:
+    - mysql:mysql
+    #- pgsql:pgsql
+    #- redis:redis
+
+mysql:
+  container_name: mariadb
+  image: dydx/alpine-mariadb
+  ports:
+    - "3306:3306"
+
+#pgsql:
+#  container_name: postgres
+#  image: postgres
+#  ports:
+#    - "5432:5432"
+
+#redis:
+#  container_name: redis
+#  image: redis
+#  ports:
+#    - "6379:6379"
