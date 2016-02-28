@@ -69,6 +69,11 @@ Notify::set('title','type','message',true)
 This will create a session notification based on: [edvinaskrucas/notification](https://github.com/edvinaskrucas/notification)
 You can get the number of new notifications created on the latest request using `Notify::getNotificationCount()`
 
+## Testing
+This skeleton comes with multiple unit tests. For running then, create a sqlite database named `testing.sqlite` on database folder and run:
+```bash
+phpunit
+```
 
 #### License
 
