@@ -59,7 +59,9 @@
         </div>
         <br/>
 
-        @yield('content')
+        <div id="container">
+            @yield('content')
+        </div>
 
         @include('dashboard.includes.footer')
     </div>
