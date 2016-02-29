@@ -14,3 +14,4 @@
 <script src="{{ asset('assets/dashboard/js/morris.min.js') }}" id="script-resource-14"></script>
 <script src="{{ asset('assets/dashboard/js/toastr.js') }}" id="script-resource-15"></script>
 <script src="{{ asset('assets/dashboard/js/neon-chat.js') }}" id="script-resource-16"></script>
+<script src="{{ asset('js/main.js') }}"></script>
