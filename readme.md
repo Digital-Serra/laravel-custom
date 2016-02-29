@@ -19,7 +19,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Artisan Command for git pull on remote server
 * Debugbar
 * Bower pre-configured with Jquery, Bootstrap, Font-Awesome and Sweetalert
-* Gulp pre-configured with Laravel elixir, copy assets to public and compiling less
+* Gulp pre-configured with Laravel elixir, copy assets to public
 * Login and register views and routes pre-configured
 * Reset password system
 * pt-BR language
