@@ -54,9 +54,9 @@ elixir(function (mix) {
         .copy(bowerDir + 'bootstrap/dist/js/bootstrap.min.js', 'public/js')
         .copy(bowerDir + 'particles.js/particles.min.js', 'public/js/auth/')
 
-        // Copy base css to public
-        .copy('resources/assets/css/base.css', 'public/css/base.min.css')
-
         //Dashboard assets
         .copy('resources/assets/dashboard', 'public/assets/dashboard')
+
+        //Main Vue File
+        .browserify('main.js')
 });
