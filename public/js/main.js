@@ -9809,7 +9809,7 @@ new AppVue({
     inherit: true,
     el: '#mail-form',
     data: {
-        hiddenCC: false,
+        hiddenCC: true,
         hiddenBCC: true
     },
     ready: function ready() {},
@@ -9821,6 +9821,11 @@ new AppVue({
             if (type == 'cc') {
                 this.hiddenCC = !this.hiddenCC;
             }
+        },
+        hide: function hide(event) {
+            $('#bcc').parent().addClass('hidden');
+            $('#bcc').val('');
+            $('#bcc').val('');
         }
     }
 });
