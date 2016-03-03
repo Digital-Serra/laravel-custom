@@ -22,8 +22,6 @@
     "font-awesome": "~4.5",
     "particles.js": "https://github.com/VincentGarreau/particles.js.git#~2.0.0",
     "sweetalert": "~1.1.0",
-    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
-    "vue": "^1.0.17",
-    "vue-resource": "^0.7.0"
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37"
   }
 }
