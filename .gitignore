@@ -112,3 +112,4 @@ erl_crash.dump
 ### IDE Helper Files  ###
 .phpstorm.meta.php
 _ide_helper.php
+composer.lock
