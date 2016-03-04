@@ -45,7 +45,7 @@ class MailController extends Controller
     {
         Mail::send('dashboard.templates.mail',
             [
-                'message' => $request->get('message')
+                'data' => $request->get('message')
             ], function ($message) use ($request) {
                 $message->from(env('MAIL_USERNAME', null));
                 $message->to($request->get('to'), null);
