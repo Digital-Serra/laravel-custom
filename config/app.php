@@ -1,4 +1,5 @@
 <?php
+use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 
 return [
 
@@ -178,10 +179,15 @@ return [
          * L5-Repository
          * */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-	/*
+	       /*
          * Barryvdh\LaravelIdeHelper
          **/
-	Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+	       Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+         /**
+          * Laracasts/Flash
+          */
+          Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*
@@ -245,6 +251,8 @@ return [
         //Notification Flash
         'Notification' => Krucas\Notification\Facades\Notification::class,
 
+        //Laracasts Flash
+        'Flash' => 'Laracasts\Flash\Flash'
     ],
 
 ];
