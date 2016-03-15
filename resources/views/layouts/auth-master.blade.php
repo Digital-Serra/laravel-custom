@@ -18,7 +18,7 @@
     <div class="login-header login-caret">
         <div class="login-content">
             <a href="{{ route('dashboard.index') }}" class="logo">
-                <img src="{{ asset('assets/dashboard/images/logo@2x.png') }}" width="120" alt=""/>
+                <img src="{{ asset('img/logo.svg') }}" width="100%" alt=""/>
             </a>
             <!-- progress bar indicator -->
             <div class="login-progressbar-indicator"><h3>43%</h3> <span>Efetuando o login...</span></div>
