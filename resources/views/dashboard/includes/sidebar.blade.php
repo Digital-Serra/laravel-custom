@@ -3,7 +3,7 @@
         <header class="logo-env"> <!-- logo -->
             <div class="logo">
                 <a href="{{ route('dashboard.index') }}">
-                    <img src="{{ asset('assets/dashboard/images/logo@2x.png') }}" width="120" alt=""/>
+                    <img src="{{ asset('img/logo.svg') }}" width="120" alt=""/>
                 </a>
             </div> <!-- logo collapse icon -->
             <div class="sidebar-collapse">
