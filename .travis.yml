@@ -9,6 +9,7 @@ php:
 before_script:
   - composer self-update
   - composer install --no-scripts
+  - php artisan key:generate
   - touch database/testing.sqlite
 
 script: vendor/bin/phpunit
