@@ -72,6 +72,7 @@ You can get the number of new notifications created on the latest request using 
 ## Testing
 This skeleton comes with multiple unit tests. For running then, create a sqlite database named `testing.sqlite` on database folder and run:
 ```bash
+touch database/database.sqlite
 phpunit
 ```
 
