@@ -46,11 +46,9 @@
             "php -r \"copy('.env.example', '.env');\"",
             "php artisan key:generate"
         ],
-        "pre-update-cmd": [
-            "php artisan clear-compiled"
-        ],
         "post-update-cmd": [
-            "php artisan optimize"
+            "php artisan optimize",
+            "php artisan clear-compiled"
         ],
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
