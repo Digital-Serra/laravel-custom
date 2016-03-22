@@ -8,7 +8,7 @@ php:
 
 before_script:
   - composer self-update
-  - composer install --no-scripts
+  - composer install
   - touch database/testing.sqlite
 
 script: vendor/bin/phpunit
