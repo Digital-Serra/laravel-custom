@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Core\Http\Requests;
 
-use App\Http\Requests\Request;
+use App\Core\Http\Requests\Request;
 
 class MailFormRequest extends Request
 {

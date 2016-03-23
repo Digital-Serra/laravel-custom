@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace App\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Entities\Notification;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Notify', function(){
-            return new \App\Notifications\Notification();
+            return new Notification();
         });
     }
 }

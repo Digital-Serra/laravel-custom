@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http;
+namespace App\Core\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,11 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \App\Http\Middleware\EncryptCookies::class,
+        \App\Core\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Http\Middleware\VerifyCsrfToken::class,
+        \App\Core\Http\Middleware\VerifyCsrfToken::class,
         \Krucas\Notification\Middleware\NotificationMiddleware::class
     ];
 
@@ -27,10 +27,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
+        'auth' => \App\Core\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'checkTokenExists' => \App\Http\Middleware\CheckTokenExists::class,
-        'shareDashVarsToView' => \App\Http\Middleware\ShareDashVarsToView::class,
+        'guest' => \App\Core\Http\Middleware\RedirectIfAuthenticated::class,
+        'checkTokenExists' => \App\Core\Http\Middleware\CheckTokenExists::class,
+        'shareDashVarsToView' => \App\Core\Http\Middleware\ShareDashVarsToView::class,
     ];
 }
