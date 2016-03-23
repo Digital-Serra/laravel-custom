@@ -236,7 +236,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Notify'    => \App\Notifications\Facades\Notify::class,
+        'Notify'    => \App\Applications\Dashboard\Notifications\Facades\Notify::class,
 
         //Collective
         'Form' => Collective\Html\FormFacade::class,
