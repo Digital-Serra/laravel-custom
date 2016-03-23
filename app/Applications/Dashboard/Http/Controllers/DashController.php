@@ -8,6 +8,6 @@ class DashController extends BaseController
 {
     public function index()
     {
-        return view('dashboard.index');
+        return $this->view('index');
     }
 }
