@@ -3,9 +3,9 @@
 namespace App\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Entities\Notification;
+use App\Domains\Users\Notification;
 
-class AppServiceProvider extends ServiceProvider
+class CoreServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -24,8 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Notify', function(){
-            return new Notification();
-        });
+        $this->app->bind(
+            'Notify', function () {
+                return new Notification();
+            }
+        );
     }
 }
