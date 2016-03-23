@@ -15,6 +15,7 @@ class DashboardServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerRoutes($this->app['router']);
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dashboard');
     }
 
     /**
