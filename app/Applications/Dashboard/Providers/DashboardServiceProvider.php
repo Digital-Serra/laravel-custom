@@ -31,8 +31,8 @@ class DashboardServiceProvider extends ServiceProvider
     {
         $router->group(
             ['namespace' => 'App\Applications\Dashboard\Http\Controllers'],
-            function ($router) {
-                require app_path('app/Applications/Dashboard/Http/routes.php');
+            function ($router) use ($router) {
+                require app_path('Applications/Dashboard/Http/routes.php');
             }
         );
     }
