@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Applications\Dashboard\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Applications\Dashboard\Http\Controllers\Base\BaseController;
+use App\Applications\Dashboard\Http\Requests\Base\BaseRequest as Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
-class NotificationController extends Controller
+class NotificationController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,10 @@ class NotificationController extends Controller
      */
     public function index()
     {
-        $notifications = auth()->user()->notifications()->orderBy('id','desc')->paginate(10);
+        $notifications = auth()->user()
+            ->notifications()
+            ->orderBy('id','desc')
+            ->paginate(10);
         return view('dashboard.notifications.index',compact('notifications'));
     }
 

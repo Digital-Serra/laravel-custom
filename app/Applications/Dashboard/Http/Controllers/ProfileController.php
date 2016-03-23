@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Applications\Dashboard\Http\Controllers;
 
-use App\Entities\User;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Requests\ProfileFormRequest;
-use App\Http\Controllers\Controller;
+use App\Applications\Dashboard\Http\Controllers\Base\BaseController;
+use App\Core\Http\Requests\ProfileFormRequest;
+use App\Domains\Users\User;
+use App\Applications\Dashboard\Http\Requests\Base\BaseRequest;
 use Illuminate\Support\Facades\Hash;
 use Krucas\Notification\Facades\Notification;
 
-class ProfileController extends Controller
+class ProfileController extends BaseController
 {
     /**
      * @var User
@@ -21,7 +19,6 @@ class ProfileController extends Controller
     /**
      * ProfileController constructor.
      * @param User $user
-     * @param Notification $notification
      */
     public function __construct(User $user)
     {
@@ -54,7 +51,7 @@ class ProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BaseRequest $request)
     {
         //
     }
