@@ -11,5 +11,5 @@
 */
 
 Route::get('/',['as' =>'home.index',function () {
-    return view('welcome');
+    return view('site::welcome');
 }]);
