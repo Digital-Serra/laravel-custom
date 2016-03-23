@@ -145,10 +145,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        App\Core\Providers\AppServiceProvider::class,
+        App\Core\Providers\AuthServiceProvider::class,
+        App\Core\Providers\EventServiceProvider::class,
+        App\Core\Providers\RouteServiceProvider::class,
 
         /*
          * Laravel Collective
@@ -179,15 +179,15 @@ return [
          * L5-Repository
          * */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-	       /*
+        /*
          * Barryvdh\LaravelIdeHelper
          **/
-	       Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+	    Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
-         /**
-          * Laracasts/Flash
-          */
-          Laracasts\Flash\FlashServiceProvider::class
+        /*
+         * Laracasts/Flash
+         */
+        Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*
