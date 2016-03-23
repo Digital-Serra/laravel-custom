@@ -1,18 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Applications\Dashboard\Http\Controllers;
 
-use App\Notifications\Facades\Notify;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Requests\MailFormRequest;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Log;
+use App\Applications\Dashboard\Http\Controllers\Base\BaseController;
+use App\Applications\Dashboard\Http\Requests\Base\BaseRequest;
+use App\Applications\Dashboard\Http\Requests\MailFormRequest;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Log;
+use App\Applications\Dashboard\Notifications\Facades\Notify;
 
-class MailController extends Controller
+class MailController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -62,9 +59,14 @@ class MailController extends Controller
             });
 
         //Log Users action
-        Log::info('Email send in dashboard from '.$request->getClientIp(). ' to '.$request->get('to'));
+        Log::info(
+            'Email send in dashboard from '.$request->getClientIp(). ' to '.$request->get('to')
+        );
 
-        Notify::set('Sucesso','success','Email para '.$request->get('to').' enviado com sucesso!',true);
+        Notify::set(
+            'Sucesso','success','Email para '.$request->get('to').' enviado com sucesso!',
+            true
+        );
 
         return redirect()
             ->route('dashboard.mail.create');
@@ -99,7 +101,7 @@ class MailController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BaseRequest $request, $id)
     {
         //
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Core\Http\Requests;
+namespace App\Applications\Dashboard\Http\Requests;
 
-use App\Core\Http\Requests\Request;
+use App\Applications\Dashboard\Http\Requests\Base\BaseRequest;
 
-class MailFormRequest extends Request
+class MailFormRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -32,12 +32,11 @@ class MailFormRequest extends Request
                     'subject'=>'required',
                     'message'=>'required'
                 ];
-            }
-            case 'PUT': {
-
+                break;
             }
         }
     }
+
     public function attributes()
     {
         return [
