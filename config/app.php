@@ -149,6 +149,8 @@ return [
         App\Core\Providers\AuthServiceProvider::class,
         App\Core\Providers\EventServiceProvider::class,
         App\Core\Providers\RouteServiceProvider::class,
+        App\Applications\Dashboard\Providers\DashboardServiceProvider::class,
+        App\Applications\Site\Providers\SiteServiceProvider::class,
 
         /*
          * Laravel Collective
