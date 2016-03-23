@@ -1,4 +1,4 @@
-@extends('layouts.dashboard',['title'=>'Index'])
+@extends('dashboard::layouts.dashboard',['title'=>'Index'])
 
 
 @section('styles')

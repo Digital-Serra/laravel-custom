@@ -2,6 +2,7 @@
 namespace App\Applications\Dashboard\Providers;
 
 
+use App\Applications\Dashboard\Notifications\Notification;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 
@@ -25,7 +26,12 @@ class DashboardServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
+        $this->app->bind(
+            'Notify', function () {
+                return new Notification();
+            }
+        );
     }
 
     public function registerRoutes(Router $router)

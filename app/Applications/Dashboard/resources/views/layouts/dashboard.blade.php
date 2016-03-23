@@ -8,15 +8,15 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <title>Administração - {{ $title or " " }}</title>
 
-    @include('dashboard.includes.styles')
+    @include('dashboard::includes.styles')
 
     @yield('styles')
 </head>
 <body class="page-body page-fade">
 <div class="page-container">
-    @include('dashboard.includes.sidebar')
+    @include('dashboard::includes.sidebar')
     <div class="main-content">
-        @include('dashboard.includes.header')
+        @include('dashboard::includes.header')
         <hr/>
         <div class="row">
             <div class="col-sm-3 col-xs-6">
@@ -63,7 +63,7 @@
             @yield('content')
         </div>
 
-        @include('dashboard.includes.footer')
+        @include('dashboard::includes.footer')
     </div>
     <!-- TS145512113111406: Xenon - Boostrap Admin Template created by Laborator / Please buy this theme and support the updates -->
     <div id="chat" class="fixed" data-current-user="Art Ramadani" data-order-by-status="1" data-max-chat-history="25">
@@ -184,8 +184,8 @@
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/jvectormap/jquery-jvectormap-1.2.2.css') }}"
       id="style-resource-1">
 <link rel="stylesheet" href="{{ asset('assets/dashboard/js/rickshaw/rickshaw.min.css') }}" id="style-resource-2">
-@include('dashboard.includes.notifications')
-@include('dashboard.includes.scripts')
+@include('dashboard::includes.notifications')
+@include('dashboard::includes.scripts')
 <!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>

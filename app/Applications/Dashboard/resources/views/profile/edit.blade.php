@@ -8,7 +8,7 @@
 @section('content')
     <h1>Editar Perfil</h1>
     {!! Form::open(['url'=>route('dashboard.profile.update'),'method'=>'PUT']) !!}
-        @include('dashboard.forms._profile')
+        @include('dashboard::forms._profile')
     {!! Form::close() !!}
 
 @stop

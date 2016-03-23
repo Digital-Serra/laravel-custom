@@ -24,10 +24,6 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            'Notify', function () {
-                return new Notification();
-            }
-        );
+        //
     }
 }
