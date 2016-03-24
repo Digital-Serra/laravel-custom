@@ -1,4 +1,4 @@
-@extends('layouts.dashboard',['title'=>'Novo Email'])
+@extends('dashboard::layouts.dashboard',['title'=>'Novo Email'])
 
 @section('styles')
     {{-- Your stylesheet for this page here --}}

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard',['title'=>'Editar Perfil'])
+@extends('dashboard::layouts.dashboard',['title'=>'Editar Perfil'])
 
 
 @section('styles')

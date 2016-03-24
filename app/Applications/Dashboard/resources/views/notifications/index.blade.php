@@ -1,4 +1,4 @@
-@extends('layouts.dashboard',['title'=>'Notificações'])
+@extends('dashboard::layouts.dashboard',['title'=>'Notificações'])
 
 
 @section('styles')
