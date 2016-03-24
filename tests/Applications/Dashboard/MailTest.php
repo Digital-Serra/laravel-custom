@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Dashboard;
+namespace App\Tests\Applications\Dashboard;
 
 use App\Tests\AbstractTestCase;
 use App\Tests\Traits\AuthenticateUser;

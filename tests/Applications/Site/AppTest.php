@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\FrontPages;
+namespace App\Tests\Applications\Site;
 
 use App\Tests\AbstractTestCase;
 
@@ -14,6 +14,6 @@ class AppTest extends AbstractTestCase
     public function test_base_route()
     {
         $this->visit('/')
-             ->see('Laravel 5');
+            ->see('Laravel 5');
     }
 }
