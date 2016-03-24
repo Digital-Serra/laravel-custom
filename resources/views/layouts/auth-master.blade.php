@@ -8,7 +8,7 @@
     <meta name="author" content="Mauri de Souza Nunes(github.com/mauri870) - Digital Serra Tecnologia Digital"/>
     <link rel="icon" href="http://demo.neontheme.com/assets/images/favicon.ico">
     <title>{{ $title }}</title>
-    @include('dashboard.includes.styles')
+    @include('dashboard::includes.styles')
 </head>
 <body class="page-body login-page login-form-fall" data-url="{{ env('APP_URL') }}">
 <script type="text/javascript">
@@ -31,8 +31,8 @@
     @yield('body')
 
 </div>
-@include('dashboard.includes.scripts')
-@include('dashboard.includes.notifications')
+@include('dashboard::includes.scripts')
+@include('dashboard::includes.notifications')
 <!-- JavaScripts initializations and stuff -->
 <!-- Demo Settings -->
 <script src="{{ asset('assets/dashboard/js/neon-custom.js') }}" id="script-resource-17"></script>

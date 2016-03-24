@@ -14,12 +14,10 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Laravel Collective
 * Repository Layer
 * IDE Helper Files for Facades, Models and PhpStorm autocompletation
-* Service Layer
 * Laravel Collective Remote
 * Artisan Command for git pull on remote server
 * Debugbar
 * Bower pre-configured with Jquery, Bootstrap, Font-Awesome and Sweetalert
-* Gulp pre-configured with Laravel elixir, copy assets to public
 * Login and register views and routes pre-configured
 * Reset password system
 * pt-BR language
@@ -61,7 +59,7 @@ Set new persistent notifications with:
 ```php
 Notify::set('title','type','message')
 ```
-Type must be one of: info, success, error or warning
+Type must be one of: `info`, `success`, `error` or `warning`
 You can automatically set a session message passing `true` as the fourth argument:
 ```php
 Notify::set('title','type','message',true)
@@ -70,8 +68,9 @@ This will create a session notification based on: [edvinaskrucas/notification](h
 You can get the number of new notifications created on the latest request using `Notify::getNotificationCount()`
 
 ## Testing
-This skeleton comes with multiple unit tests. For running then, create a sqlite database named `testing.sqlite` on database folder and run:
+This skeleton comes with multiple unit tests
 ```bash
+touch database/testing.sqlite
 phpunit
 ```
 

@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\Entities\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Domains\Users\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -20,12 +20,12 @@ $factory->define(App\Entities\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Entities\Notification::class, function (Faker\Generator $faker) {
+$factory->define(App\Domains\Users\Notification::class, function (Faker\Generator $faker) {
     $types = ['info','success','warning','error'];
     return [
         'title' => $faker->title,
         'type' => $types[array_rand($types)],
         'body' => $faker->paragraph(),
-        'user_id' => \App\Entities\User::all()->random()->id
+        'user_id' => App\Domains\Users\User::all()->random()->id
     ];
 });

@@ -12,14 +12,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('users')->insert(
+            [
              'name'=>'Test',
              'email'=>'test@test.com',
              'password'=>bcrypt('12345678'),
              'created_at'=> \Carbon\Carbon::now(),
              'updated_at'=> \Carbon\Carbon::now()
-        ]);
+            ]
+        );
 
-        factory(\App\Entities\User::class, 2)->create();
+        factory(App\Domains\Users\User::class, 2)->create();
     }
 }

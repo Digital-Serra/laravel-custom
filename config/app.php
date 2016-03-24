@@ -145,10 +145,12 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        App\Core\Providers\CoreServiceProvider::class,
+        App\Core\Providers\AuthServiceProvider::class,
+        App\Core\Providers\EventServiceProvider::class,
+        App\Core\Providers\RouteServiceProvider::class,
+        App\Applications\Dashboard\Providers\DashboardServiceProvider::class,
+        App\Applications\Site\Providers\SiteServiceProvider::class,
 
         /*
          * Laravel Collective
@@ -179,15 +181,15 @@ return [
          * L5-Repository
          * */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-	       /*
+        /*
          * Barryvdh\LaravelIdeHelper
          **/
-	       Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+	    Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
-         /**
-          * Laracasts/Flash
-          */
-          Laracasts\Flash\FlashServiceProvider::class
+        /*
+         * Laracasts/Flash
+         */
+        Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*
@@ -236,7 +238,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Notify'    => \App\Notifications\Facades\Notify::class,
+        'Notify'    => \App\Applications\Dashboard\Notifications\Facades\Notify::class,
 
         //Collective
         'Form' => Collective\Html\FormFacade::class,
