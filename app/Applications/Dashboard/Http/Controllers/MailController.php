@@ -29,7 +29,7 @@ class MailController extends BaseController
     public function create()
     {
 
-        return view('dashboard.mail.create');
+        return $this->view('dashboard.mail.create');
     }
 
     /**
@@ -40,7 +40,7 @@ class MailController extends BaseController
      */
     public function store(MailFormRequest $request)
     {
-        Mail::send('dashboard.templates.mail',
+        Mail::send('dashboard::templates.mail',
             [
                 'data' => $request->get('message')
             ], function ($message) use ($request) {

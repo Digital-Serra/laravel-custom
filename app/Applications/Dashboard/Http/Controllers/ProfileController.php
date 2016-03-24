@@ -75,7 +75,7 @@ class ProfileController extends BaseController
      */
     public function edit()
     {
-        return view('dashboard.profile.edit');
+        return $this->view('dashboard.profile.edit');
     }
 
 
