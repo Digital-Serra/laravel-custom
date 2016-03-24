@@ -1,15 +1,10 @@
 <?php
-/**
- * @author    Mauri de Souza Nunes <mauri870@gmail.com>
- * @copyright Copyright (c) 2015, Mauri de Souza Nunes <github.com/mauri870>
- * @license   https://opensource.org/licenses/MIT MIT License
- */
 
 namespace App\Tests\Traits;
 
 
-use App\Entities\User;
-use Illuminate\Support\Facades\Auth;
+use App\Domains\Users\User;
+use Carbon\Carbon;
 
 trait InteractsWithUser
 {
@@ -23,7 +18,13 @@ trait InteractsWithUser
      */
     public function insertTestUser($name = 'test', $email = 'test@test.com', $password = '12345678'){
         if(User::all()->count() == 0){
-            User::create(['name'=>$name,'email'=>$email,'password'=>bcrypt($password),'created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
+            User::create(
+                [
+                    'name'=>$name,
+                    'email'=>$email,
+                    'password'=>bcrypt($password),
+                    'created_at'=>Carbon::now(),
+                    'updated_at'=>Carbon::now()]);
         }
 
         return true;
