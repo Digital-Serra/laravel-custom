@@ -29,7 +29,7 @@ class MailController extends BaseController
     public function create()
     {
 
-        return $this->view('dashboard.mail.create');
+        return $this->view('mail.create');
     }
 
     /**

@@ -3,7 +3,7 @@
 namespace App\Applications\Dashboard\Http\Controllers;
 
 use App\Applications\Dashboard\Http\Controllers\Base\BaseController;
-use App\Core\Http\Requests\ProfileFormRequest;
+use App\Applications\Dashboard\Http\Requests\ProfileFormRequest;
 use App\Domains\Users\User;
 use App\Applications\Dashboard\Http\Requests\Base\BaseRequest;
 use Illuminate\Support\Facades\Hash;
@@ -75,7 +75,7 @@ class ProfileController extends BaseController
      */
     public function edit()
     {
-        return $this->view('dashboard.profile.edit');
+        return $this->view('profile.edit');
     }
 
 

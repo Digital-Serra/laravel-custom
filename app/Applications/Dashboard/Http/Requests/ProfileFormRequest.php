@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Core\Http\Requests;
+namespace App\Applications\Dashboard\Http\Requests;
 
-use App\Core\Http\Requests\Request;
+use App\Applications\Dashboard\Http\Requests\Base\BaseRequest;
 
-class ProfileFormRequest extends Request
+class ProfileFormRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
