@@ -26,8 +26,7 @@ class DashboardServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
-        $this->app->bind(
+        $this->app->singleton(
             'Notify', function () {
                 return new Notification();
             }
