@@ -5,11 +5,16 @@ namespace App\Tests\Applications\Dashboard;
 use App\Tests\AbstractTestCase;
 use App\Applications\Dashboard\Notifications\Facades\Notify;
 use App\Tests\Traits\AuthenticateUser;
+use App\Applications\Dashboard\Notifications\Notification;
 
 class NotificationTest extends AbstractTestCase
 {
     use AuthenticateUser;
 
+    public function test_if_can_get_the_notification_instance_from_container()
+    {
+        $this->assertEquals(new Notification(), $this->app['Notify']);
+    }
     public function test_can_view_notifications_page()
     {
         $this->visit('dashboard/notifications')
