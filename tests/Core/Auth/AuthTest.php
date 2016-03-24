@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Auth;
+namespace App\Tests\Core\Auth;
 
 use App\Tests\AbstractTestCase;
 
@@ -24,8 +24,8 @@ class AuthTest extends AbstractTestCase
         $this->visit('/register')
             ->type('Example', 'name')
             ->type('example@example.com', 'email')
-            ->type('12345678','password')
-            ->type('12345678','password_confirmation')
+            ->type('12345678', 'password')
+            ->type('12345678', 'password_confirmation')
             ->press('Registrar-se')
             ->seePageIs('/dashboard')
             ->assertResponseStatus(200);
@@ -35,7 +35,7 @@ class AuthTest extends AbstractTestCase
     {
         $this->visit('/login')
             ->type('test@test.com', 'email')
-            ->type('12345678','password')
+            ->type('12345678', 'password')
             ->check('remember')
             ->press('Entrar')
             ->seePageIs('/dashboard')

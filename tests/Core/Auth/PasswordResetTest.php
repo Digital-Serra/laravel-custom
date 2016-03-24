@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Auth;
+namespace App\Tests\Core\Auth;
 
 use App\Tests\AbstractTestCase;
 
@@ -20,7 +20,7 @@ class PasswordResetTest extends AbstractTestCase
     {
         $token = md5(uniqid("this is a test token"));
 
-        $this->call('GET','/password/reset/'.$token);
+        $this->call('GET', '/password/reset/'.$token);
 
         $this->assertResponseStatus(404);
     }
