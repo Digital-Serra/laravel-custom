@@ -10,6 +10,4 @@
 |
 */
 
-Route::get('/',['as' =>'home.index',function () {
-    return view('site::welcome');
-}]);
+$router->get('/',['as' =>'home.index','uses'=>'HomeController@index']);
