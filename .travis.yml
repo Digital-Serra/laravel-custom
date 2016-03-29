@@ -6,9 +6,13 @@ php:
   - hhvm
   - nightly
 
+matrix:
+  allow_failures:
+    - php: nightly
+
 before_script:
-  - composer self-update
-  - npm install
-  - composer install
+  - travis_retry composer self-update
+  - travis_retry npm install
+  - travis_retry composer install
 
 script: vendor/bin/phpunit
