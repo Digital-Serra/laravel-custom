@@ -24,7 +24,7 @@
             </div>
             <div class="mail-compose">
                 {!! Form::open(['route'=>'dashboard.mail.store','method'=>'post','id'=>'mail-form']) !!}
-                    @include('dashboard::forms._mail')
+                    <mail-form></mail-form>
                 {!! Form::close() !!}
             </div>
         </div>
