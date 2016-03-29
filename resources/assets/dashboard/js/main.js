@@ -1,41 +1,17 @@
-
 import Vue from 'vue';
+
+Vue.use(require('vue-resource'));
+
+import MailForm from './components/mail.vue';
+import Wheather from './components/weather.vue';
 
 /*
 * Vue base
 * */
-var AppVue = Vue.extend({
-    el: '#container',
-    data: {
-    }
-});
-
-/*
-* Email Form
-* */
-new AppVue({
-    inherit: true,
-    el: '#mail-form',
-    data: {
-        hiddenCC: true,
-        hiddenBCC: true,
-    },
-    ready: function (){
-
-    },
-    methods: {
-        clickButton: function (event, type){
-            if(type == 'bcc'){
-                this.hiddenBCC = ! this.hiddenBCC;
-            }
-            if(type == 'cc'){
-                this.hiddenCC = ! this.hiddenCC;
-            }
-        },
-        hide: function (event){
-            $('#bcc').parent().addClass('hidden');
-            $('#bcc').val('');
-            $('#bcc').val('');
-        }
+var app = new Vue({
+    el: '.page-container',
+    components: {
+        MailForm,
+        Wheather
     }
 });
