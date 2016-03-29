@@ -58,6 +58,6 @@ gulp.task('dashboard', function () {
             .copy('resources/assets/dashboard', 'public/assets/dashboard')
 
             //Main Vue File
-            .browserify('../dashboard/js/main.js','public/assets/dashboard/js')
+            .browserify('../dashboard/js/main.js','public/assets/dashboard/js/main.js')
     })
 });
