@@ -7,25 +7,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-12">
-            <div class="panel panel-primary" id="charts_env">
-                <div class="panel-heading">
-                    <div class="panel-title">Informações</div>
-                    <div class="panel-options">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#weather" data-toggle="tab">Tempo</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="#weather">
-                            <wheather></wheather>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <weather city="bento gonçalves-RS"></weather>
     </div>
     <br/>
 @stop
