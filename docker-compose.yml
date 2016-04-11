@@ -18,6 +18,7 @@ mysql:
     - MYSQL_DATABASE=api
     - MYSQL_USER=mauri870
     - MYSQL_PASSWORD=12345678
+    - MYSQL_ROOT_PASSWORD=root
   ports:
     - "3306:3306"
 
