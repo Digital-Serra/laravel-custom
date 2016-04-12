@@ -50,7 +50,9 @@ composer create-project digitalserra/laravel-custom project-name "~1.0" --prefer
 ## Docker
 
 This skeleton comes with docker containers preconfigured. See `docker-compose.yml` for adding or removing containers.
-For start your containers simply run `./docker-up.sh`.
+A number of build-in commands is available:
+
+`php artisan docker:up | down | restart` - Start, drop or restart the docker containers specified on docker-compose.yml
 
 ## Notifications
 
