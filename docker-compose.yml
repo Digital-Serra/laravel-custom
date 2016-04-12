@@ -8,7 +8,7 @@ web:
     - ./nginx-sites:/etc/nginx/sites-enabled
   links:
     #- pgsql:pgsql
-    - redis:redis
+    #- redis:redis
     - mysql:mysql
 
 mysql:
@@ -31,8 +31,8 @@ mysql:
 #  ports:
 #    - "5432:5432"
 
-redis:
-  container_name: redis
-  image: redis:latest
-  ports:
-    - "6379:6379"
+#redis:
+#  container_name: redis
+#  image: redis:latest
+#  ports:
+#    - "6379:6379"
