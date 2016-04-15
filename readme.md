@@ -60,7 +60,7 @@ The following commands is available for usage:
 
 `php artisan docker:up | down | restart` - Start, drop or restart the docker containers specified on docker-compose.yml
 
-`php artisan ssh:run {command} | pull  --folder | --branch` - Execute ssh operations
+`php artisan ssh:run {command} | pull  {--folder=public_html | --branch=master}` - Execute ssh operations
 
 ## Notifications
 
