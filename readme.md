@@ -54,6 +54,14 @@ A number of build-in commands is available:
 
 `php artisan docker:up | down | restart` - Start, drop or restart the docker containers specified on docker-compose.yml
 
+## Commands
+
+The following commands is available for usage:
+
+`php artisan docker:up | down | restart` - Start, drop or restart the docker containers specified on docker-compose.yml
+
+`php artisan ssh:run {command} | pull  --folder | --branch` - Execute ssh operations
+
 ## Notifications
 
 Set new persistent notifications with:
