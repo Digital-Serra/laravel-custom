@@ -1,26 +1,26 @@
 web:
   container_name: nginx
-  image: dydx/alpine-nginx-phpfpm
+  image: ttaranto/docker-nginx-php7
   ports:
     - "80:80"
   volumes:
-    - ./:/var/www
+    - ./:/var/www/
     - ./nginx-sites:/etc/nginx/sites-enabled
-  links:
+  #links:
     #- pgsql:pgsql
     #- redis:redis
-    - mysql:mysql
+    #- mysql:mysql
 
-mysql:
-  container_name: mariadb
-  image: mariadb:latest
-  environment:
-    - MYSQL_DATABASE=api
-    - MYSQL_USER=mauri870
-    - MYSQL_PASSWORD=12345678
-    - MYSQL_ROOT_PASSWORD=root
-  ports:
-    - "3306:3306"
+#mysql:
+#  container_name: mariadb
+#  image: mariadb:latest
+#  environment:
+#    - MYSQL_DATABASE=api
+#    - MYSQL_USER=mauri870
+#    - MYSQL_PASSWORD=12345678
+#    - MYSQL_ROOT_PASSWORD=root
+#  ports:
+#    - "3306:3306"
 
 #pgsql:
 #  container_name: postgres
@@ -35,5 +35,3 @@ mysql:
 #redis:
 #  container_name: redis
 #  image: redis:latest
-#  ports:
-#    - "6379:6379"
