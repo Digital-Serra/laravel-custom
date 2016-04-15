@@ -1,25 +1,25 @@
 <?php
 
-namespace App\Core\Console\Commands;
+namespace App\Core\Console\Commands\Ssh;
 
 use Illuminate\Console\Command;
 use phpseclib\Net\SSH1;
 
-class SshUpdate extends Command
+class SshRun extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'ssh:pull';
+    protected $signature = 'ssh:run {shell : The command to execute on remote server}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Update the project with git on remote server.';
+    protected $description = 'Run a shell command on remote server';
 
     /**
      * Create a new command instance.
@@ -38,6 +38,7 @@ class SshUpdate extends Command
      */
     public function handle()
     {
-        \SSH::run(['cd public_html','git pull origin master']);
+        $command = $this->argument('shell');
+        \SSH::run($command);
     }
 }
