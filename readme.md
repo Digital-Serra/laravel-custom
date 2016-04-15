@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/Digital-Serra/laravel-custom.svg?branch=5.1)](https://travis-ci.org/Digital-Serra/laravel-custom)
 
+[![Latest Stable Version](https://poser.pugx.org/digitalserra/laravel-custom/version)](https://packagist.org/packages/digitalserra/laravel-custom)
+
 > For old dashboard template use the [5.1 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.1)
 
 ## Diferences
