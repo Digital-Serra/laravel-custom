@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Core\Console\Commands\Inspire::class,
-        \App\Core\Console\Commands\SshUpdate::class,
+        \App\Core\Console\Commands\Ssh\SshPull::class,
+        \App\Core\Console\Commands\Ssh\SshRun::class,
         \App\Core\Console\Commands\Docker\DockerUpCommand::class,
         \App\Core\Console\Commands\Docker\DockerDownCommand::class,
         \App\Core\Console\Commands\Docker\DockerRestartCommand::class
