@@ -27,7 +27,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 ### Installation
 
 ```
-composer create-project digitalserra/laravel-custom project-name "~1.0" --prefer-dist
+composer create-project digitalserra/laravel-custom project-name "~1.0"
 ``` 
     
 * Install the prerequisites
