@@ -1,6 +1,8 @@
 var elixir = require('laravel-elixir');
-var bowerDir = './vendor/bower_components/';
 var gulp = require('gulp');
+require('laravel-elixir-vueify');
+
+var bowerDir = './vendor/bower_components/';
 
 elixir(function (mix) {
 
