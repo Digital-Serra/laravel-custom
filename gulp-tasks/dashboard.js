@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-var bowerDir = 'vendor/bower_components/';
+var bowerDir = './vendor/bower_components/';
 var gulp = require('gulp');
 
 //Disable generate *.css.map on compile .less files
@@ -35,8 +35,8 @@ elixir(function (mix) {
 
         //Compiling font awesome and bootstrap into a single file
         .less([
-                '../../../' + bowerDir + 'bootstrap/less/bootstrap.less',
-                '../../../' + bowerDir + 'font-awesome/less/font-awesome.less'],
+                bowerDir + 'bootstrap/less/bootstrap.less',
+                bowerDir + 'font-awesome/less/font-awesome.less'],
             'resources/assets/css/base.css'
         )
 
