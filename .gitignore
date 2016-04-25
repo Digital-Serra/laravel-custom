@@ -113,3 +113,12 @@ erl_crash.dump
 .phpstorm.meta.php
 _ide_helper.php
 composer.lock
+
+
+### Public Files ###
+public/build
+public/css
+public/fonts
+public/images
+public/assets
+public/js
