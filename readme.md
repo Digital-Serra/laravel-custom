@@ -4,8 +4,6 @@
 
 [![Latest Stable Version](https://poser.pugx.org/digitalserra/laravel-custom/version)](https://packagist.org/packages/digitalserra/laravel-custom)
 
-> For old dashboard template use the [5.1 branch](https://github.com/Digital-Serra/laravel-custom/tree/5.1)
-
 ## Diferences
 
 This package is a standard laravel 5.1.* installation, but with some additional content and pre-configured
@@ -14,7 +12,7 @@ This package is a standard laravel 5.1.* installation, but with some additional 
 * Whoops
 * Heroku deploy ready, create your app, add [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) and push to heroku
 * Laravel Collective
-* Repository Layer
+* Prettus L5 Repository
 * IDE Helper Files for Facades, Models and PhpStorm autocompletation
 * Laravel Collective Remote
 * Artisan Command for git pull on remote server
