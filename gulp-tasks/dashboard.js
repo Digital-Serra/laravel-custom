@@ -11,6 +11,12 @@ elixir(function (mix) {
         bowerDir + 'font-awesome/fonts'
     ], 'public/assets/dashboard/fonts')
 
+    //Compiling font awesome and bootstrap into a single file		
+    .less([		
+        bowerDir + 'bootstrap/less/bootstrap.less',		
+        bowerDir + 'font-awesome/less/font-awesome.less'
+    ], 'public/css/base.min.css')
+
     //Copy Sweetalert assets to public
     mix.copy(bowerDir + 'sweetalert/dist/sweetalert.css', 'public/css')
     mix.copy(bowerDir + 'sweetalert/dist/sweetalert.min.js', 'public/js')
