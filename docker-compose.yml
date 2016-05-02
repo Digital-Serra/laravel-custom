@@ -15,10 +15,9 @@ web:
 #  container_name: mariadb
 #  image: mariadb:latest
 #  environment:
-#    - MYSQL_DATABASE=api
-#    - MYSQL_USER=mauri870
+#    - MYSQL_DATABASE=db
+#    - MYSQL_USER=admin
 #    - MYSQL_PASSWORD=12345678
-#    - MYSQL_ROOT_PASSWORD=root
 #  ports:
 #    - "3306:3306"
 
@@ -26,8 +25,8 @@ web:
 #  container_name: postgres
 #  image: postgres:latest
 #  environment:
-#    - POSTGRES_DB=api
-#    - POSTGRES_USER=mauri870
+#    - POSTGRES_DB=db
+#    - POSTGRES_USER=admin
 #    - POSTGRES_PASSWORD=12345678
 #  ports:
 #    - "5432:5432"

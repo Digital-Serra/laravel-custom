@@ -9,15 +9,18 @@
         data() {
             return {
                 url: 'http://developers.agenciaideias.com.br/tempo/json/',
-                weather: {}
+                weather: {},
+                error: false,
+                success: false
             }
         },
         ready() {
             self = this;
             this.$http({url: self.url + this.city, method: 'GET'}).then(function (response) {
                 self.weather = response.data;
+                this.success = true
             }, function (response) {
-                // error callback
+                this.error = true
             });
 
         }
@@ -37,7 +40,21 @@
                 </div>
             </div>
             <div class="panel-body">
-                <div class="tab-content">
+                <!-- Error Message -->
+                <div class="alert alert-danger" v-if="error">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Ops!</strong> <br>
+                    Houve um problema ao atualizar os dados do clima! <br>
+                    Tentaremos novamente em breve!
+                </div>
+                <!-- End Error Message -->
+                <!-- Loader Div -->
+                <div class="col-sm-12 text-center" v-show="!error && !success">
+                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                    <p>Carregando...</p>
+                </div>
+                <!-- End Loader Div -->
+                <div class="tab-content" v-if="success">
                     <div class="tab-pane active" id="weather">
                         <h1 class="capitalize">{{ city }}</h1>
                         <h3>Agora</h3>
