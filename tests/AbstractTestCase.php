@@ -27,13 +27,8 @@ abstract class AbstractTestCase extends TestCase
      */
     public function createApplication()
     {
-        putenv('DB_CONNECTION=testing');
-        putenv('MAIL_DRIVER=log');
-
         $app = require __DIR__.'/../bootstrap/app.php';
-
         $app->make(Kernel::class)->bootstrap();
-
         return $app;
     }
 }
