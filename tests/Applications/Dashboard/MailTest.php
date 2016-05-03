@@ -18,18 +18,17 @@ class MailTest extends AbstractTestCase
 
     public function test_can_send_an_email()
     {
-        $this->markTestSkipped(
-            'The mail form structure has moved to vue component.
-            Laravel cannot access the form inputs'
-        );
+        $this->withoutMiddleware();
 
-        $this->visit('/dashboard/mail/create')
-           ->type('test@test.com','to')
-           ->type('test@test.com','cc')
-           ->type('test@test.com','bcc')
-           ->type('This is a message!','message')
-           ->click('Enviar')
-           ->seePageIs('/dashboard/mail/create')
-           ->assertResponseStatus(200);
+        $this->post('/dashboard/mail',
+            [
+                'to' => 'test@test.com',
+                'cc' => 'test@test.com',
+                'bcc' => 'test@test.com',
+                'message' => 'This is a message!'
+            ]
+        )->assertResponseStatus(302);
+
+        $this->assertEquals(0, count($this->app['mailer']->failures()));
     }
 }
