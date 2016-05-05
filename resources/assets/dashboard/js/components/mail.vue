@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="form-group" v-bind:class="{ 'hidden': hiddenBCC }">
-            <label for="bcc">Cópia</label>
+            <label for="bcc">Cópia Oculta</label>
             <input class="form-control" id="bcc" tabindex="2" placeholder="email@dominio.com" name="bcc" type="email">
             <div class="field-options">
                 <a href="javascript:;" v-on:click="hide" title="Excluir" class="danger"><i class="entypo-cancel"></i></a>
