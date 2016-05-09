@@ -6,10 +6,6 @@ php:
   - hhvm
   - nightly
 
-matrix:
-  allow_failures:
-    - php: nightly
-
 before_script:
   - travis_retry composer self-update
   - npm install -g npm@'>=3.8'

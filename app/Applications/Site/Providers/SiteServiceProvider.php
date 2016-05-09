@@ -32,7 +32,7 @@ class SiteServiceProvider extends ServiceProvider
     {
         $router->group(
             ['namespace' => 'App\Applications\Site\Http\Controllers'],
-            function ($router) use ($router) {
+            function () use ($router) {
                 require app_path('Applications/Site/Http/routes.php');
             }
         );
