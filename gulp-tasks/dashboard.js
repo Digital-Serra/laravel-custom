@@ -3,6 +3,7 @@ var gulp = require('gulp');
 require('laravel-elixir-vueify');
 
 var bowerDir = './vendor/bower_components/';
+var resourceDir = './app/Applications/Dashboard/resources/assets/';
 
 elixir(function (mix) {
 
@@ -32,8 +33,8 @@ elixir(function (mix) {
     mix.copy(bowerDir + 'particles.js/particles.min.js', 'public/js/auth/')
 
     //Dashboard assets
-    mix.copy('resources/assets/dashboard', 'public/assets/dashboard')
+    mix.copy(resourceDir + 'dashboard', 'public/assets/dashboard')
 
     //Main Vue File
-    mix.browserify('../dashboard/js/main.js', 'public/assets/dashboard/js/main.js')
+    mix.browserify(resourceDir + 'dashboard/js/main.js', 'public/assets/dashboard/js/main.js')
 })
